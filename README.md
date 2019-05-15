@@ -1,11 +1,4 @@
 # NS-2-Selfish-Behavior-Protocols
-The node type is used as data source and relays the control options, this type of node is maintained at all times.
-
-You can read the full article clicking the link 
-* [OLSR Fuzzy Cost (OLSR-FC): an extension to OLSR protocol based on fuzzy logic and applied to avoid selfish nodes](https://github.com/dioxfile/NS-2-Selfish-Behavior-Protocols/raw/master/86380-376997-1-PB.pdf)</br>
-Made during master's dissertation of Diogenes Antonio Marques, teacher at the State University of Mato Grosso - Barra do Bugres - MT - Brazil 
-
-
 
 Ad-hoc mobile networks (MANETs) are those whose nodes have mobility, energy restriction and which function simultaneously as end systems and router. One of the main problems encountered in MANETs is the occurrence of selfish nodes.
 
@@ -50,7 +43,7 @@ Output: Routing, Disposal, or Package Processing.
 # Como usar?
 Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](link), apos feito a compilacao do NS-2 voce tera de adicionar os comandos nos arquivos AODV;DSDV;DSragent;OLSR, respectivamente 
 
-* AODV
+* aodv.cc
 
 <p>
   <pre><code>
