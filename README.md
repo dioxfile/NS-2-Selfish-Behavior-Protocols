@@ -11,10 +11,8 @@ O problema do nó egoísta segundo [Bakakhouya](https://ieeexplore.ieee.org/abst
 
 * Existem dois tipos de nos egoístas:
 
-<ul>
-  <li>o que participa corretamente das funções de roteamento, porém não redireciona pacotes de dados;</li>
-  <li>e o que não participa, descartando mensagens de controle.</li>
-</ul>
+1. o que participa corretamente das funções de roteamento, porém não redireciona pacotes de dados;
+2. e o que não participa, descartando mensagens de controle.
 
 O nó egoísta do tipo 2 não tem grande efeito na taxa de entrega de pacotes. Todavia, o tipo 1 é o mais prejudicial à rede por degradar a taxa de entrega de pacotes.
 
