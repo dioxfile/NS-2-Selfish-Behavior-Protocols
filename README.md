@@ -9,62 +9,62 @@ OLSR-MD) concerning the performance metrics: packet loss, end-to-end delay, Jitt
 routing overhead and throughput. The results showed that OLSR-FC obtains better performance than the
 evaluated extensions, avoiding selfish nodes and selecting routes whose links have little packet losses.
 
-# Definição de Nós Egoístas: 
-O tipo de nó egoísta utilizado é aquele que descarta pacotes de dados e retransmite pacotes de controle, este tipo de nós egoísta mantém este comportamento todo o tempo.
+# Definition of Egoistic Nodes:
+The node type is used as data source and relays the control options, this type of node is maintained at all times.
 
-As quantidades de nós egoístas foram selecionadas aleatoriamente no intervalo [0, 49]. O comportamento egoísta foi implementado na função recv do OLSR, Algoritmo 1. Além disso, para contabilizar as perdas de pacotes por egoísmo foi implementado no NS-2 um evento de descarte denominado SEL, que significa SELFISH. Por exemplo, se um nó descartar um pacote por egoísmoo NS-2 gravará no arquivo de trace o evento como: D 19.868681666 _11_ RTR SEL 3445 cbr 1020 [...] 48:0 53:0 [...]. Os significados de cada um dos campos do trecho do arquivo de trace são apresentados a seguir: D: evento de descarte; 19.868681666: tempo em que o evento ocorreu; _11_: nó onde o evento ocorreu; RTR: camada em que o evento ocorreu; SEL: o tipo de evento, descarte por egoísmo; 3445: id do pacote que foi descartado; cbr: tipo de tráfego, Constant Bit Rate; 1020: tamanho do pacote; [...]: evento suprimido (supressão nossa); 48:0: nó que originou o pacote e porta de origem; 13:0: nó destino e porta de destino.
+The quantities of selfish nodes were selected randomly in the interval [0, 49]. Selfish behavior was implemented in the recv function of the OLSR, Algorithm 1. In addition, to account for the losses of packages for selfishness was implemented in the NS-2 a discard event called SEL, which means SELFISH. For example, if a node discards a packet by selfish NS-2 it will write to the trace file the event as: D 19.868681666 _11_ RTR SEL 3445 cbr 1020 [...] 48: 0 53: 0 [...]. The meanings of each of the fields in the trace file excerpt are given below: D: discard event; 19.868681666: time at which the event occurred; _11_: node where the event occurred; RTR: layer in which the event occurred; SEL: the type of event, discarded by selfishness; 3445: id of the package that was dropped; cbr: traffic type, Constant Bit Rate; 1020: package size; [...]: event deleted (deletion from us); 48: 0: node that originated the source packet and port; 13: 0: destination node and destination port.
 
 ---
 <p>
   <pre><code>
 --------------------------------------------------------------
 A LGORITHM 1
-Comportamento Egoísta do Nó OLSR.
+Selfish Behavior of the OLSR Node.
 --------------------------------------------------------------
-Input: Pacote de Dados ou Controle.
-Output: Encaminhamento, Descarte ou Processamento do Pacote.
-1: if (Pacote de Dados) then
-2:  if (Pacote de Dados foi Originado no nó Atual) then
-3:    Encaminha(Pacote);
+Input: Data Package or Control.
+Output: Routing, Disposal, or Package Processing.
+1: if (Data Package) then
+2:  if (Data Packet was Originated in the Current Node) then
+3:    Forwards(Package);
 4:  else
-5:    Descarta(Pacote);
+5:    Drop(Package);
 6:  end if
 7: else
-8:  Passe o pacote ao OLSR para processamento;
+8:  Pass the package to the OLSR for processing;
 9: end if
   </code></pre>
 </p>
 
-Os resultados apresentados das métricas de desempenho avaliadas foram calculados da média aritmética de 12 fluxos de tráfego. O script utilizado para extração dessas métricas está disponível em [Performance-Network-Metrics-NS-2
-](https://github.com/dioxfile/Performance-Network-Metrics-NS-2) (ex., Github). A Tabela 6 apresenta um resumo dos parâmetros usados na simulação.
+The results of the performance metrics evaluated were calculated from the arithmetic mean of 12 traffic flows. The script used to extract these metrics is available in [Performance-Network-Metrics-NS-2
+](https://github.com/dioxfile/Performance-Network-Metrics-NS-2) (ex., Github). Table 6 presents a summary of the parameters used in the simulation.
 
 
 
 
-| Parâmetros da Simulação          | Valor                                |
-|:--------------------------------:|:------------------------------------:|
-| Área de simulação                | 1000m × 1000m                        |
-| Quantidade de nós                | 50                                   |
-| Tipo de tráfego                  | CBR UDP                              |
-|Tamanho dos pacotes               | 1000 bytes                           |     
-|Taxa de transmissão               |16pps (128Kbps)                       |
-|Quantidades de fluxo de tráfego   |12                                    |     
-|Modelo de propagação do sinal     |TwoRayGround                          |
-|Carga total de energia do nó      |100 Watts (W) (ex., 100J/s)           |
-|Potência (TX/RX)                  |TX = 1,2W e RX = 0,6W                 |
-|Alcance de interferência          |250m (Padrão no NS-2)                 |
-|Tipo de MAC                       |IEEE 802.11b                          |
-|Modelo de Mobilidade              |Random Waypoint                       |
-|Velocidade do nó                  |mínima 5m/s e máxima 15m/s sem pausa  |  
-|Quantidade de nós egoístas        |10%, 20%, 30% e 40%                   |    
-|Comportamento egoísta dos nós     |Constante                             |
-|Tempo de simulação                |50s                                   |
-|Willingness OLSR                  |3                                     |
-|Algoritmo de Seleção de MPR       |OLSR-FC = RFC 3626; OLSR-ETX,         | 
-|                                  |OLSR-ML e OLSR-MD = Ge et al. [3]     |
-|Quantidades de execuções          |   10                                 |
-|Nível de confiança                | 95%                                  |
-|Quantidade de Pacotes Gerados     |7644                                  |
+| Simulation Parameters            | Value                                      |
+|:--------------------------------:|:------------------------------------------:|
+|Simulation zone                   |1000m × 1000m                               |
+|Number of nodes                   |50                                          |
+|Type of traffic                   |CBR UDP                                     |
+|Package size                      |1000 bytes                                  |     
+|Transmission rate                 |16pps (128Kbps)                             |
+|Traffic Flow Quantities           |12                                          |     
+|Sign propagation model            |TwoRayGround                                |
+|Total power load of the node      |100 Watts (W) (ex., 100J/s)                 |
+|Potency (TX/RX)                   |TX = 1,2W e RX = 0,6W                       |
+|Range of interference             |250m (Padrão no NS-2)                       |
+|Type of MAC                       |IEEE 802.11b                                |
+|Mobility Model                    |Random Waypoint                             |
+|Node Speed                        |minimum 5m/s and maximum 15m/s without pause|  
+|Quantity of selfish nodes         |10%, 20%, 30% e 40%                         |    
+|Selfish behavior of knots         |Constant                                    |
+|Simulation time                   |50s                                         |
+|Willingness OLSR                  |3                                           |
+|Algorithm of Selection of MPR     |OLSR-FC = RFC 3626; OLSR-ETX,               | 
+|                                  |OLSR-ML e OLSR-MD = Ge et al. [3]           |
+|Quantity of executions            |10                                          |
+|Quantity of executions            |95%                                         |
+|Quantity of Packages Generated    |7644                                        |
 
 
 
