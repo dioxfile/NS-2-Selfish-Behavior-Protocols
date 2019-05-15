@@ -46,30 +46,51 @@ Output: Routing, Disposal, or Package Processing.
   </code></pre>
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 # Como usar?
+Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](link), apos feito a compilacao do NS-2 voce tera de adicionar os comandos nos arquivos AODV;DSDV;DSragent;OLSR, respectivamente 
+
+* AODV
+
+<p>
+  <pre><code>
+///entre as linhas 97-98  
+///Start Sefish Behavior
+    if(strcmp(argv[1], "egoista_on") == 0){
+	   selfish = true;
+	   return TCL_OK;
+    } 
+    ///Stop Sefish Behavior
+    else if(strcmp(argv[1], "egoista_off") == 0){
+	   selfish = false;
+	   return TCL_OK;
+    }
+</code></pre>
+</p>    
+
+
+<p>
+  <pre><code>
+///apos a linha 153
+///Initializing variable
+  selfish = false;
+</code></pre>
+</p>  
+
+<p>
+  <pre><code>
+entre a inha 609-610
+///Set node's Behavior selfish - By Diógenes
+   if(ih->saddr() != index && selfish == true){
+	  drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
+	  return; 
+  }</code></pre>
+</p>  
+
+
+
+
+
+
+
+
