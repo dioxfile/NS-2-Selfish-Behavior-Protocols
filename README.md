@@ -1,4 +1,13 @@
 # NS-2-Selfish-Behavior-Protocols
+The mobile ad-hoc networks (MANET) are those whose nodes have mobility, energy restriction
+and operate simultaneously as end systems and router. One of the main problems found in MANETs is the
+occurrence of selfish nodes, which are those that refuse to route packets for other nodes. To address the issue
+of selfish nodes in MANETs and improve the flow of traffic in these networks, this paper proposes an extension
+to the OLSR protocol, based on Fuzzy logic, called OLSR Fuzzy Cost (OLSR -FC). Using the NS-2 simulator,
+the OLSR-FC proposal was compared to other extensions of OLSR protocol (e.g., OLSR-ETX, OLSR-ML e
+OLSR-MD) concerning the performance metrics: packet loss, end-to-end delay, Jitter, power consumption,
+routing overhead and throughput. The results showed that OLSR-FC obtains better performance than the
+evaluated extensions, avoiding selfish nodes and selecting routes whose links have little packet losses.
 
 # Definição de Nós Egoístas: 
 O tipo de nó egoísta utilizado é aquele que descarta pacotes de dados e retransmite pacotes de controle, este tipo de nós egoísta mantém este comportamento todo o tempo.
