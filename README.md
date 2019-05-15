@@ -17,7 +17,11 @@ O problema do nó egoísta segundo [Bakakhouya](https://ieeexplore.ieee.org/abst
 O nó egoísta do tipo 2 não tem grande efeito na taxa de entrega de pacotes. Todavia, o tipo 1 é o mais prejudicial à rede por degradar a taxa de entrega de pacotes.
 
 
-
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
 
 
 
