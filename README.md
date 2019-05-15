@@ -18,7 +18,12 @@ Output: Encaminhamento, Descarte ou Processamento do Pacote.</br>
 8:  Passe o pacote ao OLSR para processamento;</br>
 9: end if</br>
 
-
+<p>
+  Essa é a função sayHello():
+  <pre><code>function sayHello() {
+    return 'hi!';
+  }</code></pre>
+</p>
 
 
 
