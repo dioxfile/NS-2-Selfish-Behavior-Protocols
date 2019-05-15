@@ -60,8 +60,8 @@ The results of the performance metrics evaluated were calculated from the arithm
 |Selfish behavior of knots         |Constant                                    |
 |Simulation time                   |50s                                         |
 |Willingness OLSR                  |3                                           |
-|Algorithm of Selection of MPR     |OLSR-FC = RFC 3626; OLSR-ETX,               | 
-                                    OLSR-ML e OLSR-MD = Ge et al. [3]           |
+|Algorithm of Selection of MPR     |OLSR-FC = RFC 3626; OLSR-ETX, OLSR-ML e OLSR-MD = Ge et al. [3]| 
+|                                  |                                            |
 |Quantity of executions            |10                                          |
 |Quantity of executions            |95%                                         |
 |Quantity of Packages Generated    |7644                                        |
