@@ -9,10 +9,12 @@ According to [WANKHADE](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 The problem of the selfish knot according to [Bakakhouya](https://ieeexplore.ieee.org/abstract/document/4756492) is that it participates in routing functions by agreeing to forward packets on behalf of other nodes, but instead silently discards packets in an attempt to save energy and bandwidth.
 
 * There are two types of us selfish:
+
 <ol>
   <li>which correctly participates in the routing functions, but does not redirect data packets;</li>
   <li>and what does not participate, discarding control messages.</li>
 </ol>
+
 > The selfish knot of type 2 has no great effect on the packet delivery rate. However, type 1 is the most damaging to the network by degrading the packet delivery rate.
 
 
