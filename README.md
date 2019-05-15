@@ -3,7 +3,7 @@ As redes móveis ad-hoc (MANETs) são aquelas cujos nós possuem mobilidade, res
 e que funcionam simultaneamente como sistemas finais e roteador. Um dos principais problemas encontrados
 em MANETs é a ocorrência de nós egoístas.
 
-De acordo com [WANKHADE](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e92c8614705cd1c9b2f.pdf) um dos principais problemas das redes MANETs consiste no comportamento dos nós egoístas, que podem ser definidas pelas atitudes de obter vantagens da rede (ex., vazão), watts, entre outros), principalmente no encaminhamento de pacotes, que consome uma quantidade significante de energia e nem todos os nós estão dispostos a gastar esse precioso recurso encaminhando pacotes que não sejam seus.
+De acordo com [WANKHADE](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e92c8614705cd1c9b2f.pdf) um dos principais problemas das redes MANETs consiste no comportamento dos nós egoístas, que podem ser definidas pelas atitudes de obter vantagens da rede (ex., vazã, watts, entre outros), principalmente no encaminhamento de pacotes, que consome uma quantidade significante de energia e nem todos os nós estão dispostos a gastar esse precioso recurso encaminhando pacotes que não sejam seus.
 
 
 
