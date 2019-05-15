@@ -1,7 +1,27 @@
 # NS-2-Selfish-Behavior-Protocols
 
 # Definição de Nós Egoístas: 
-O tipo de nó egoísta utilizado é aquele que descarta pacotes de dados e retransmite pacotes de controle [18], este tipo de nós egoísta mantém este comportamento todo o **tempo**.
+O tipo de nó egoísta utilizado é aquele que descarta pacotes de dados e retransmite pacotes de controle, este tipo de nós egoísta mantém este comportamento todo o tempo.
+
+
+
+
+| Parâmetros da Simulação     | Valor                 |
+| ----------------------------|----------------------:|
+| col 3 is                    | right-aligned         |
+| col 2 is                    | centered              |
+| zebra stripes               | are neat              |
+
+-
+
+
+
+
+
+
+
+
+
 
 ---
 <p>
