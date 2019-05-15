@@ -2,6 +2,7 @@
 
 # Definição de Nós Egoístas: 
 O tipo de nó egoísta utilizado é aquele que descarta pacotes de dados e retransmite pacotes de controle [18], este tipo de nós egoísta mantém este comportamento todo o **tempo**.
+
 ---
 <p>
   <pre><code>
