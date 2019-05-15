@@ -9,7 +9,7 @@ Comportamento Egoísta do Nó OLSR.
 Input: Pacote de Dados ou Controle.
 Output: Encaminhamento, Descarte ou Processamento do
 Pacote.
-1: if (Pacote de Dados) then
+1: if (Pacote de Dados) then</br>
 2:  if (Pacote de Dados foi Originado no nó Atual) then
 3:    Encaminha(Pacote);
 4:  else
