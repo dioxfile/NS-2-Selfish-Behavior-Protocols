@@ -19,10 +19,18 @@ Output: Encaminhamento, Descarte ou Processamento do Pacote.</br>
 9: end if</br>
 
 <p>
-  Essa é a função sayHello():
-  <pre><code>function sayHello() {
-    return 'hi!';
-  }</code></pre>
+  A LGORITHM 1
+  <pre><code>
+  1: if (Pacote de Dados) then
+  2:  if (Pacote de Dados foi Originado no nó Atual) then
+  3:    Encaminha(Pacote);
+  4:  else
+  5:    Descarta(Pacote);
+  6:  end if
+  7: else
+  8:  Passe o pacote ao OLSR para processamento;
+  9: end if
+  </code></pre>
 </p>
 
 
