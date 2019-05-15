@@ -14,7 +14,7 @@ Output: Encaminhamento, Descarte ou Processamento do Pacote.
 1: if (Pacote de Dados) then
 2:  if (Pacote de Dados foi Originado no nó Atual) then
 3:    Encaminha(Pacote);
-4:  __else__
+4:  else
 5:    Descarta(Pacote);
 6:  end if
 7: else
