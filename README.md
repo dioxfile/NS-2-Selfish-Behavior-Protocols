@@ -1,22 +1,19 @@
 # NS-2-Selfish-Behavior-Protocols
-As redes móveis ad-hoc (MANETs) são aquelas cujos nós possuem mobilidade, restrição de energia
-e que funcionam simultaneamente como sistemas finais e roteador. Um dos principais problemas encontrados
-em MANETs é a ocorrência de nós egoístas.
+Ad-hoc mobile networks (MANETs) are those whose nodes have mobility, energy restriction and which function simultaneously as end systems and router. One of the main problems encountered in MANETs is the occurrence of selfish nodes.
 
-De acordo com [WANKHADE](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e92c8614705cd1c9b2f.pdf) um dos principais problemas das redes MANETs consiste no comportamento dos nós egoístas, que podem ser definidas pelas atitudes de obter vantagens da rede (ex., vazã, watts, entre outros), principalmente no encaminhamento de pacotes, que consome uma quantidade significante de energia e nem todos os nós estão dispostos a gastar esse precioso recurso encaminhando pacotes que não sejam seus.
+According to [WANKHADE](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e92c8614705cd1c9b2f.pdf) one of the main problems of MANETs networks is the behavior of selfish nodes, which can be defined by the attitudes of obtaining network advantages (eg, flow, watts, among others), especially in packet routing, which consumes a significant amount of energy and not all nodes are willing to spend that precious resource by forwarding packets that are not theirs.
 
+---
 # Definition of Selfish Nodes:
 
-O problema do nó egoísta segundo [Bakakhouya](https://ieeexplore.ieee.org/abstract/document/4756492) consiste no fato de ele participar das funções de roteamento, concordando em encaminhar pacotes em nome de outros nós, mas, em vez disso, descarta os pacotes silenciosamente na tentativa de economizar a energia e a largura de banda.
+The problem of the selfish knot according to [Bakakhouya](https://ieeexplore.ieee.org/abstract/document/4756492) is that it participates in routing functions by agreeing to forward packets on behalf of other nodes, but instead silently discards packets in an attempt to save energy and bandwidth.
 
-* Existem dois tipos de nos egoístas:
+* There are two types of us selfish:
 <ol>
-  <li>o que participa corretamente das funções de roteamento, porém não redireciona pacotes de dados;</li>
-  <li>e o que não participa, descartando mensagens de controle.</li>
+  <li>which correctly participates in the routing functions, but does not redirect data packets;</li>
+  <li>and what does not participate, discarding control messages.</li>
 </ol>
-
-O nó egoísta do tipo 2 não tem grande efeito na taxa de entrega de pacotes. Todavia, o tipo 1 é o mais prejudicial à rede por degradar a taxa de entrega de pacotes.
-
+> The selfish knot of type 2 has no great effect on the packet delivery rate. However, type 1 is the most damaging to the network by degrading the packet delivery rate.
 
 
 
