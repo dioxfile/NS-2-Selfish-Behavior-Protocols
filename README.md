@@ -7,7 +7,7 @@ O tipo de nó egoísta utilizado é aquele que descarta pacotes de dados e retra
 
 
 | Parâmetros da Simulação          | Valor                                |
-| ---------------------------------|-------------------------------------:|
+|:--------------------------------:|:------------------------------------:|
 | Área de simulação                | 1000m × 1000m                        |
 | Quantidade de nós                | 50                                   |
 | Tipo de tráfego                  | CBR UDP                              |
