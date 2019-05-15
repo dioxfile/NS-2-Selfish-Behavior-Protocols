@@ -6,14 +6,30 @@ O tipo de nó egoísta utilizado é aquele que descarta pacotes de dados e retra
 
 
 
-| Parâmetros da Simulação     | Valor                 |
-| ----------------------------|----------------------:|
-| col 3 is                    | right-aligned         |
-| col 2 is                    | centered              |
-| zebra stripes               | are neat              |
-
--
-
+| Parâmetros da Simulação          | Valor                                |
+| ---------------------------------|-------------------------------------:|
+| Área de simulação                | 1000m × 1000m                        |
+| Quantidade de nós                | 50                                   |
+| Tipo de tráfego                  | CBR UDP                              |
+|Tamanho dos pacotes               | 1000 bytes                           |     
+|Taxa de transmissão               |16pps (128Kbps)                       |
+|Quantidades de fluxo de tráfego   |12                                    |     
+|Modelo de propagação do sinal     |TwoRayGround                          |
+|Carga total de energia do nó      |100 Watts (W) (ex., 100J/s)           |
+|Potência (TX/RX)                  |TX = 1,2W e RX = 0,6W                 |
+|Alcance de interferência          |250m (Padrão no NS-2)                 |
+|Tipo de MAC                       |IEEE 802.11b                          |
+|Modelo de Mobilidade              |Random Waypoint                       |
+|Velocidade do nó                  |mínima 5m/s e máxima 15m/s sem pausa  |  
+|Quantidade de nós egoístas        |10%, 20%, 30% e 40%                   |    
+|Comportamento egoísta dos nós     |Constante                             |
+|Tempo de simulação                |50s                                   |
+|Willingness OLSR                  |3                                     |
+|Algoritmo de Seleção de MPR       |OLSR-FC = RFC 3626; OLSR-ETX,         | 
+|                                  |OLSR-ML e OLSR-MD = Ge et al. [3]     |
+|Quantidades de execuções          |   10                                 |
+|Nível de confiança                | 95%                                  |
+|Quantidade de Pacotes Gerados     |7644                                  |
 
 
 
