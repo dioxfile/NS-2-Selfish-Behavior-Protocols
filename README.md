@@ -4,11 +4,11 @@
 O tipo de nó egoísta utilizado é aquele que descarta pacotes de dados e retransmite pacotes de controle [18], este tipo de nós egoísta mantém este comportamento todo o tempo.
 
 <p>
---------------------------------------------------------------</br>
-A LGORITHM 1</br>
-Comportamento Egoísta do Nó OLSR.</br>
---------------------------------------------------------------</br>
   <pre><code>
+--------------------------------------------------------------
+A LGORITHM 1
+Comportamento Egoísta do Nó OLSR.
+--------------------------------------------------------------
 Input: Pacote de Dados ou Controle.
 Output: Encaminhamento, Descarte ou Processamento do Pacote.
 1: if (Pacote de Dados) then
