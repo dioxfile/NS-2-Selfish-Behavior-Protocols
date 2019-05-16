@@ -41,8 +41,18 @@ Output: Routing, Disposal, or Package Processing.
 
 ---
 # COMO USAR?
-Voce precisa ter instalo a versao allinone do ns-allinone-2.34, que esta disponivel no link [tal tal](link), apos feito a compilacao do NS-2 voce tera de adicionar os comandos nos arquivos AODV;DSDV;OLSR;DSR, respectivamente.
- 
+
+Voce tem duas duas escolhas de como usar, ou voce baixa o ns-allinone-2.34 ja modificado [aqui](link) ou baixa o pacote limpo do ns-allinone-2.34 [aqui](link) e modifica os codigos manulamente.
+
+## Alterando manualmente:
+Voce precisa ter instalo a versao allinone do ns-allinone-2.34, apos feito a compilacao do NS-2 voce tera de adicionar as modificacoes nos arquivos AODV;DSDV;OLSR;DSR, respectivamente.
+
+Alem do mais, em nossos testes, apenas recompilar com o comando `make` nao foi o suficente, outros comandos como `make clean && make distclean` foram necessarios para o correto funcionamento do programa.
+
+Para modificar os arquivos manualmente siga o tutorial abaixo. 
+
+> Observacao: Os arquivos precisam ser compilados com uma versao do Gcc inferior a versao 5.0, em nossos testes foi utilizado a versao "gcc (Ubuntu 4.8.5-4Ubuntu9) 4.8.5" e a versao "g++ (GCC) 4.4.6 20060404 (Hed Hat 3.4.6-19.el6)"
+
 ## Para usar o protocolo AODV, altere os arquivos:
 
 * ns-2.34/aodv/aodv.cc
