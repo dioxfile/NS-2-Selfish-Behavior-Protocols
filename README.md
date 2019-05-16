@@ -25,7 +25,7 @@ The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ie
   <li>and what does not participate, discarding control messages.</li>
 </ol>
 
-> The selfish knot of type 2 has no great effect on the packet delivery rate. However, type 1 is the most damaging to the network by degrading the packet delivery rate.
+> The selfish node of type 2 has no great effect on the packet delivery rate. However, type 1 is the most damaging to the network by degrading the packet delivery rate.
 
 ---
 <p>
