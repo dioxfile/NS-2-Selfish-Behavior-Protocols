@@ -58,7 +58,7 @@ Taking into consideration that you already have the ns-allinone-2.34 version com
 
 > You do not need to change all, just modify the protocol you want to use.
 
-Moreover, in our tests, just recompiling with the `make` command was not enough, other commands like` make clean && make distclean` were necessary for the correct operation of the program.
+Moreover, in our tests, just recompiling with the `make` command was not enough, other commands like` make clean && makedistclean` were necessary for the correct operation of the program.
 
 To modify the files manually follow the tutorial below.
 
