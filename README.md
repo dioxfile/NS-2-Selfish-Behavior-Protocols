@@ -45,7 +45,7 @@ Output: Routing, Disposal, or Package Processing.
 You have two choices of how to use it, or you can download ns-allinone-2.34 already modified [here] (link) or download the ns-allinone-2.34 clean package [here] (link) and modify the codes manually.
 
 ## Manually changing:
-Taking into consideration that you already have the ns-allinone-2.34 version compiled, you will have to add the modifications in the AODV files; DSDV; OLSR; DSR, respectively.
+Taking into consideration that you already have the ns-allinone-2.34 version compiled, you will have to add the modifications in the files AODV; DSDV; OLSR; DSR, respectively.
 
 > You do not need to change all, just modify the protocol you want to use.
 
