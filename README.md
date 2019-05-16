@@ -32,7 +32,7 @@ The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ie
   <pre><code>
 --------------------------------------------------------------
 A LGORITHM 1
-Selfish Behavior of the AODV,DSDV,OLSR,DSR Node.
+Selfish Behavior of the AODV;DSDV;OLSR;DSR Node.
 --------------------------------------------------------------
 Input: Data Package or Control.
 Output: Routing, Disposal, or Package Processing.
@@ -43,7 +43,7 @@ Output: Routing, Disposal, or Package Processing.
 5:    Drop(Package);
 6:  end if
 7: else
-8:  Pass the package to the AODV,DSDV,OLSR,DSR for processing;
+8:  Pass the package to the AODV/DSDV/OLSR/DSR for processing;
 9: end if
   </code></pre>
 </p>
