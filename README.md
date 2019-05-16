@@ -46,7 +46,7 @@ Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](
 * ns-2.34/aodv/aodv.cc
 <p>
   <pre><code>
-///entre as linhas 97-98  
+///entre as linhas 97-98, adicione: 
 ///Start Sefish Behavior
     if(strcmp(argv[1], "egoista_on") == 0){
 	   selfish = true;
@@ -60,10 +60,9 @@ Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](
 </code></pre>
 </p>    
 
-
 <p>
   <pre><code>
-///apos a linha 153
+///apos a linha 153, adicione:
 ///Initializing variable
   selfish = false;
 </code></pre>
@@ -71,7 +70,7 @@ Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](
 
 <p>
   <pre><code>
-entre a inha 609-610
+///entre a inha 609-610, adicione:
 ///Set node's Behavior selfish - By Diógenes
    if(ih->saddr() != index && selfish == true){
 	  drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
@@ -79,10 +78,16 @@ entre a inha 609-610
   }</code></pre>
 </p>  
 
+---
 * ns-2.34/aodv/aodv.h
 
-
-
+<p>
+  <pre><code>
+	///Na linha 326 
+	///selfish node
+	bool selfish;
+ }</code></pre>
+</p> 	 
 
 
 
