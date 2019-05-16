@@ -72,7 +72,7 @@ Voce precisa ter instalo a versao allinone do ns-allinone-2.34, que esta disponi
 
 <p>
   <pre><code>
-///entre a inha 609-610, adicione:
+///Entre a inha 609-610, adicione:
 ///Set node's Behavior selfish - By Diógenes
    if(ih->saddr() != index && selfish == true){
 	  drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
@@ -86,7 +86,7 @@ Voce precisa ter instalo a versao allinone do ns-allinone-2.34, que esta disponi
 
 <p>
   <pre><code>
-	///Na linha 326, adicione:
+	///Apos a linha 326, adicione:
 	///selfish node
 	bool selfish;
  </code></pre>
@@ -99,7 +99,7 @@ Voce precisa ter instalo a versao allinone do ns-allinone-2.34, que esta disponi
 
 <p>
   <pre><code>
-///entre as linhas 1060 e 1061, adicione:
+///Entre as linhas 1060 e 1061, adicione:
      ///Set node's Behavior selfish - By Diógenes
       if(src != myaddr_ && selfish == true && cmh->ptype() != PT_MESSAGE){
 	drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
@@ -110,14 +110,14 @@ Voce precisa ter instalo a versao allinone do ns-allinone-2.34, que esta disponi
       
 <p>
   <pre><code>
-///apos a linha 1099, adicione:
+///Na linha 1099, adicione:
 selfish = false;
  </code></pre>
 </p>
 
 <p>
   <pre><code>
-///entre as linhas 1050 e 1051, adicione:
+///Entre as linhas 1050 e 1051, adicione:
 	///Start Sefish Behavior
       else if(strcmp(argv[1], "egoista_on") == 0){
 	   selfish = true;
@@ -136,7 +136,7 @@ selfish = false;
 
 <p>
   <pre><code>
-///na linha 140, adicione:  
+///Apos a linha 140, adicione:  
 ///selfish node
   bool selfish;
 </code></pre>
@@ -149,7 +149,7 @@ selfish = false;
 
 <p>
   <pre><code>
-Entre as linhas 216 e 217: adicione:
+///Entre as linhas 216 e 217: adicione:
      ///Start Sefish Behavior
     if(strcmp(argv[1], "egoista_on") == 0){
 	   selfish = true;
@@ -165,7 +165,7 @@ Entre as linhas 216 e 217: adicione:
 
 <p>
   <pre><code>
-Entre as linha 477 e 478, adicione 
+///Entre as linha 477 e 478, adicione 
    //Selfish var starting
    selfish = false;
 </code></pre>
@@ -173,7 +173,7 @@ Entre as linha 477 e 478, adicione
 
 <p>
   <pre><code>
-Entre as linha 515 e 516, adicione:
+///Entre as linha 515 e 516, adicione:
      ///Set node's Behavior selfish - By Diógenes
      if((ih->saddr() != ra_addr()) && selfish == true){
 		drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
@@ -182,4 +182,13 @@ Entre as linha 515 e 516, adicione:
    </code></pre>
 </p>
 
+---
+* ns-2.34/olsr/olsr.h
+<p>
+  <pre><code>
+///Apos a Linha 361, adicione:
+   /// Sets the behavior selfish node
+   bool selfish;
+   </code></pre>
+</p>
 
