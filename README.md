@@ -10,7 +10,7 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 2.1.1 [AODV](#To-use-the-AODV-protocol-change-the-files)</br>
 2.1.1 [DSDV](#To-use-the-DSDV-protocol-change-the-files)</br>
 2.1.1 [OLSR](#To-use-the-OLSR-protocol-change-the-files)</br>
-2.1.1 [DSR](#To-use-the-DRS-protocol-change-the-files)</br>
+2.1.1 [DSR](#To-use-the-DSR-protocol-change-the-files)</br>
 3. [HOW TO USE?](#HOW-TO-USE) 
 
 ---
