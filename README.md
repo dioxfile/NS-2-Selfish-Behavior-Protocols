@@ -8,7 +8,7 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 2. [HOW TO INSTALL?](#HOW-TO-INSTALL)</br>
 2.1 [Manually changing:](#Manually-changing)</br>
 2.1.1 [AODV](#AODV)</br>
-2.1.1 [AODV](#To-use-the-AODV-protocol,-change-the-files)</br>
+2.1.1 [To use the AODV protocol, change the files:](#To-use-the-AODV-protocol,-change-the-files)</br>
 2.1.1 [AODV](#AODV)</br>
 3. [HOW TO USE?](#HOW-TO-USE) 
 
