@@ -62,6 +62,12 @@ Moreover, in our tests, just recompiling with the `make` command was not enough,
 
 To modify the files manually follow the tutorial below.
 
+After modifying the files of the desired protocols compile the program with the commands (do with root permission):
+`# configure`
+`# make`
+`# make install`
+
+
 > Note: Files need to be compiled with a version of Gcc below version 5.0, in our tests we used the version "gcc (Ubuntu 4.8.5-4Ubuntu9) 4.8.5" and the version "g++ (GCC) 3.4.6 20060404 (Hed Hat 3.4.6-19.el6)".
 
 ## To use the AODV protocol change the files:
