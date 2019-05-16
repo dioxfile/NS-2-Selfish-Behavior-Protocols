@@ -16,7 +16,7 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 ---
 # Definition of Selfish Nodes:
 
-The problem of the selfish knot according to [Bakakhouya](https://ieeexplore.ieee.org/abstract/document/4756492) is that it participates in routing functions by agreeing to forward packets on behalf of other nodes, but instead silently discards packets in an attempt to save energy and bandwidth.
+The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ieee.org/abstract/document/4756492) is that it participates in routing functions by agreeing to forward packets on behalf of other nodes, but instead silently discards packets in an attempt to save energy and bandwidth.
 
 * There are two types of us selfish:
 
