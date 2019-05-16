@@ -149,7 +149,7 @@ selfish = false;
 
 <p>
   <pre><code>
-entre as linhas 216 e 217: adicione:
+Entre as linhas 216 e 217: adicione:
      ///Start Sefish Behavior
     if(strcmp(argv[1], "egoista_on") == 0){
 	   selfish = true;
@@ -171,9 +171,12 @@ Entre as linha 477 e 478, adicione
 </code></pre>
 </p>
 
-
-`Entre as linha 515 e 516, adicione:
+<p>
+  <pre><code>
+Entre as linha 515 e 516, adicione:
    //Selfish var starting
-   selfish = false;`
+   selfish = false;
+   </code></pre>
+</p>
 
 
