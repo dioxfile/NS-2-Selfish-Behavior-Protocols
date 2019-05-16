@@ -7,9 +7,10 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 1. [Definition of Selfish Nodes:](#Definition-of-Selfish-Nodes)
 2. [HOW TO INSTALL?](#HOW-TO-INSTALL)</br>
 2.1 [Manually changing:](#Manually-changing)</br>
-2.1.1 [AODV](#AODV)</br>
 2.1.1 [AODV](#To-use-the-AODV-protocol-change-the-files)</br>
-2.1.1 [AODV](#AODV)</br>
+2.1.1 [DSDV](#To-use-the-DSDV-protocol-change-the-files)</br>
+2.1.1 [OLSR](#To-use-the-OLSR-protocol-change-the-files)</br>
+2.1.1 [DSR](#To-use-the-DRS-protocol-change-the-files)</br>
 3. [HOW TO USE?](#HOW-TO-USE) 
 
 ---
@@ -31,7 +32,7 @@ The problem of the selfish knot according to [Bakakhouya](https://ieeexplore.iee
   <pre><code>
 --------------------------------------------------------------
 A LGORITHM 1
-Selfish Behavior of the AODV,DSDV,DSragent,OLSR, Node.
+Selfish Behavior of the AODV, DSDV, OLSR, DSR Node.
 --------------------------------------------------------------
 Input: Data Package or Control.
 Output: Routing, Disposal, or Package Processing.
@@ -114,7 +115,7 @@ To modify the files manually follow the tutorial below.
 
 ---
 ---
-## To use the DSDV protocol, change the files:
+## To use the DSDV protocol change the files:
 * ns-2.34/dsdv/dsdv.cc
 
 <p>
@@ -164,7 +165,7 @@ selfish = false;
 
 ---
 ---
-## To use the OLSR protocol, change the files:
+## To use the OLSR protocol change the files:
 * ns-2.34/olsr/olsr.cc
 
 <p>
@@ -214,7 +215,7 @@ selfish = false;
 
 ---
 ---
-## To use the DSR protocol, change the files:
+## To use the DSR protocol change the files:
 * ns-2.34/dsr/dsragent.cc
 
 <p>
