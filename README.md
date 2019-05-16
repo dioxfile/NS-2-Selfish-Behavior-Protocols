@@ -40,7 +40,7 @@ Output: Routing, Disposal, or Package Processing.
 </p>
 
 ---
-# HOW TO USE?
+# HOW TO INSTALL?
 
 You have two choices of how to use it, or you can download ns-allinone-2.34 already modified [here] (link) or download the ns-allinone-2.34 clean package [here] (link) and modify the codes manually.
 
@@ -254,8 +254,7 @@ selfish = false;
    </code></pre>
 </p>
 
-
-
+# HOW TO USE?
 
 
 
