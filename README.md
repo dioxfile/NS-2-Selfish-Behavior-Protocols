@@ -84,12 +84,45 @@ Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](
 
 <p>
   <pre><code>
-	///Na linha 326 
+	///Na linha 326, adicione:
 	///selfish node
 	bool selfish;
  </code></pre>
 </p> 	 
 
+<p>
+  <pre><code>
+///entre as linhas 1060 e 1061, adicione:
+     ///Set node's Behavior selfish - By Diógenes
+      if(src != myaddr_ && selfish == true && cmh->ptype() != PT_MESSAGE){
+	drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
+	return; 
+      }
+ </code></pre>
+</p>      
+      
+<p>
+  <pre><code>
+///apos a linha 1099, adicione:
+selfish = false;
+ </code></pre>
+</p>
+
+<p>
+  <pre><code>
+///entre as linhas 1050 e 1051, adicione:
+	///Start Sefish Behavior
+      else if(strcmp(argv[1], "egoista_on") == 0){
+	   selfish = true;
+	   return TCL_OK;
+      }  
+      ///Stop Sefish Behavior
+      else if(strcmp(argv[1], "egoista_off") == 0){
+	   selfish = false;
+	   return TCL_OK;
+    }
+ </code></pre>
+</p>
 
 
 
