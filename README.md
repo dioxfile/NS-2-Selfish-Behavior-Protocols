@@ -6,8 +6,8 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 
 1. [Definition of Selfish Nodes:](#Definition-of-Selfish-Nodes)
 2. [HOW TO INSTALL?](#HOW-TO-INSTALL)</br>
-2.1 [Manually changing:](#Manually-changing)
-2.2 [AODV](#AODV)
+2.1 [Manually changing:](#Manually-changing)</br>
+2.2 [AODV](#AODV)</br>
 3. [HOW TO USE?](#HOW-TO-USE) 
 
 ---
