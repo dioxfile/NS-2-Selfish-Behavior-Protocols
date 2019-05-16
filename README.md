@@ -75,7 +75,8 @@ Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](
    if(ih->saddr() != index && selfish == true){
 	  drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
 	  return; 
-  }</code></pre>
+  }
+  </code></pre>
 </p>  
 
 ---
@@ -86,7 +87,7 @@ Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](
 	///Na linha 326 
 	///selfish node
 	bool selfish;
- }</code></pre>
+ </code></pre>
 </p> 	 
 
 
