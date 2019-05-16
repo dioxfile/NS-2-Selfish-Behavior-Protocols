@@ -65,7 +65,7 @@ To modify the files manually follow the tutorial below.
 After modifying the files of the desired protocols compile the program with the commands (do with root permission):</br>
 `# make clean`</br>
 `# make distclean`</br>
-`# configure`</br>
+`# ./configure`</br>
 `# make`</br>
 `# make install`</br>
  
