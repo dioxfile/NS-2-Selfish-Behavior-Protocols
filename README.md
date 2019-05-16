@@ -32,7 +32,7 @@ The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ie
   <pre><code>
 --------------------------------------------------------------
 A LGORITHM 1
-Selfish Behavior of the AODV;DSDV;OLSR;DSR Node.
+Selfish Behavior of the AODV/DSDV/OLSR/DSR Node.
 --------------------------------------------------------------
 Input: Data Package or Control.
 Output: Routing, Disposal, or Package Processing.
