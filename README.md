@@ -131,5 +131,14 @@ selfish = false;
  </code></pre>
 </p>
 
+---
+* ns-2.34/dsdv/dsdv.h
 
+<p>
+  <pre><code>
+///na linha 140, adicione:  
+///selfish node
+  bool selfish;
+</code></pre>
+</p>
 
