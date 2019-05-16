@@ -8,9 +8,9 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 2. [HOW TO INSTALL?](#HOW-TO-INSTALL)</br>
 2.1 [Manually changing:](#Manually-changing)</br>
 2.1.1 [AODV](#To-use-the-AODV-protocol-change-the-files)</br>
-2.1.1 [DSDV](#To-use-the-DSDV-protocol-change-the-files)</br>
-2.1.1 [OLSR](#To-use-the-OLSR-protocol-change-the-files)</br>
-2.1.1 [DSR](#To-use-the-DSR-protocol-change-the-files)</br>
+2.1.2 [DSDV](#To-use-the-DSDV-protocol-change-the-files)</br>
+2.1.3 [OLSR](#To-use-the-OLSR-protocol-change-the-files)</br>
+2.1.4 [DSR](#To-use-the-DSR-protocol-change-the-files)</br>
 3. [HOW TO USE?](#HOW-TO-USE) 
 
 ---
