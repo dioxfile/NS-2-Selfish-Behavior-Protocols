@@ -174,8 +174,11 @@ Entre as linha 477 e 478, adicione
 <p>
   <pre><code>
 Entre as linha 515 e 516, adicione:
-   //Selfish var starting
-   selfish = false;
+     ///Set node's Behavior selfish - By Diógenes
+     if((ih->saddr() != ra_addr()) && selfish == true){
+		drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
+		return; 
+      }
    </code></pre>
 </p>
 
