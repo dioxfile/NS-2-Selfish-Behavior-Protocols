@@ -43,8 +43,7 @@ Output: Routing, Disposal, or Package Processing.
 # Como usar?
 Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](link), apos feito a compilacao do NS-2 voce tera de adicionar os comandos nos arquivos AODV;DSDV;DSR;OLSR, respectivamente 
 
-* aodv.cc
-
+* ns-2.34/aodv/aodv.cc
 <p>
   <pre><code>
 ///entre as linhas 97-98  
@@ -80,6 +79,7 @@ entre a inha 609-610
   }</code></pre>
 </p>  
 
+* ns-2.34/aodv/aodv.h
 
 
 
