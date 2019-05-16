@@ -41,9 +41,9 @@ Output: Routing, Disposal, or Package Processing.
 
 ---
 # COMO USAR?
-Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](link), apos feito a compilacao do NS-2 voce tera de adicionar os comandos nos arquivos AODV;DSDV;DSR;OLSR, respectivamente 
-
-## Para usar o protocolo AODV:
+Voce precisa ter instalo a versao allinone do ns-allinone-2.34, que esta disponivel no link [tal tal](link), apos feito a compilacao do NS-2 voce tera de adicionar os comandos nos arquivos AODV;DSDV;OLSR;DSR, respectivamente.
+ 
+## Para usar o protocolo AODV, altere os arquivos:
 
 * ns-2.34/aodv/aodv.cc
 <p>
@@ -141,4 +141,39 @@ selfish = false;
   bool selfish;
 </code></pre>
 </p>
+
+---
+---
+## Para usar o protocolo AODV, altere os arquivos:
+* ns-2.34/olsr/olsr.cc
+
+<p>
+  <pre><code>
+entre as linhas 216 e 217: adicione:
+     ///Start Sefish Behavior
+    if(strcmp(argv[1], "egoista_on") == 0){
+	   selfish = true;
+	   return TCL_OK;
+    }  
+    ///Stop Sefish Behavior
+    else if(strcmp(argv[1], "egoista_off") == 0){
+	   selfish = false;
+	   return TCL_OK;
+    }
+</code></pre>
+</p>
+
+<p>
+  <pre><code>
+Entre as linha 477 e 478, adicione 
+   //Selfish var starting
+   selfish = false;
+</code></pre>
+</p>
+
+
+`Entre as linha 515 e 516, adicione:
+   //Selfish var starting
+   selfish = false;`
+
 
