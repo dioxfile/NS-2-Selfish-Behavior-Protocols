@@ -84,9 +84,6 @@ Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](
 ---
 * ns-2.34/aodv/aodv.h
 
----
----
-### DSDV
 <p>
   <pre><code>
 	///Na linha 326, adicione:
@@ -94,6 +91,11 @@ Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](
 	bool selfish;
  </code></pre>
 </p> 	 
+
+---
+---
+### DSDV
+* ns-2.34/dsdv/dsdv.cc
 
 <p>
   <pre><code>
