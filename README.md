@@ -8,7 +8,7 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 2. [HOW TO INSTALL?](#HOW-TO-INSTALL)</br>
 2.1 [Manually changing:](#Manually-changing)</br>
 2.1.1 [AODV](#AODV)</br>
-2.1.1 [To use the AODV protocol, change the files:](#To-use-the-AODV-protocol,-change-the-files)</br>
+2.1.1 [To use the AODV protocol, change the files:](#To-use-the-AODV-protocol-change-the-files)</br>
 2.1.1 [AODV](#AODV)</br>
 3. [HOW TO USE?](#HOW-TO-USE) 
 
@@ -63,7 +63,7 @@ To modify the files manually follow the tutorial below.
 
 > Note: Files need to be compiled with a version of Gcc below version 5.0, in our tests we used the version "gcc (Ubuntu 4.8.5-4Ubuntu9) 4.8.5" and the version "g++ (GCC) 3.4.6 20060404 (Hed Hat 3.4.6-19.el6)".
 
-## To use the AODV protocol, change the files:
+## To use the AODV protocol change the files:
 
 * ns-2.34/aodv/aodv.cc
 <p>
