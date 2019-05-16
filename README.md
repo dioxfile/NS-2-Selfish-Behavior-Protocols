@@ -40,10 +40,10 @@ Output: Routing, Disposal, or Package Processing.
 </p>
 
 ---
-# Como usar?
+# COMO USAR?
 Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](link), apos feito a compilacao do NS-2 voce tera de adicionar os comandos nos arquivos AODV;DSDV;DSR;OLSR, respectivamente 
 
-## AODV
+## Para usar o protocolo AODV:
 
 * ns-2.34/aodv/aodv.cc
 <p>
@@ -94,7 +94,7 @@ Voce precisa ter instalo a versao allinone do NS-2 disponivel no link [tal tal](
 
 ---
 ---
-### DSDV
+## Para usar o protocolo DSDV
 * ns-2.34/dsdv/dsdv.cc
 
 <p>
