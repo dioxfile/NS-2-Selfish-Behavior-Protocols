@@ -6,7 +6,7 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 
 1. [Definition of Selfish Nodes:](#Definition-of-Selfish-Nodes)
 1. [HOW TO INSTALL?](#HOW-TO-INSTALL)
-1. [HOW TO USE?](HOW-TO-USE) 
+1. [HOW TO USE?](#HOW-TO-USE) 
 
 ---
 # Definition of Selfish Nodes:
