@@ -144,7 +144,7 @@ selfish = false;
 
 ---
 ---
-## Para usar o protocolo AODV, altere os arquivos:
+## Para usar o protocolo OLSR, altere os arquivos:
 * ns-2.34/olsr/olsr.cc
 
 <p>
@@ -191,4 +191,65 @@ selfish = false;
    bool selfish;
    </code></pre>
 </p>
+
+---
+---
+## Para usar o protocolo DSR, altere os arquivos:
+* ns-2.34/dsr/dsragent.cc
+
+<p>
+  <pre><code>
+///Apos linha 390, adicione:
+selfish = false;
+   </code></pre>
+</p>
+
+<p>
+  <pre><code>
+///Entre as linhas 490 e 491, adicione:
+      ///Start Sefish Behavior
+      if(strcmp(argv[1], "egoista_on") == 0){
+	   selfish = true;
+	   return TCL_OK;
+      }  
+      ///Stop Sefish Behavior
+      else if(strcmp(argv[1], "egoista_off") == 0){
+	   selfish = false;
+	   return TCL_OK;
+    }
+   </code></pre>
+</p>
+
+<p>
+  <pre><code>
+///Entre as linhas 673 e 674, adicione:
+	  ///Set node's Behavior selfish - By Diógenes
+	  if(p.src != net_id && selfish == true && cmh->ptype() != PT_DSR){
+	    drop(packet, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
+	    return; 
+	  }
+   </code></pre>
+</p>
+
+---
+* ns-2.34/dsr/dsragent.h
+
+<p>
+  <pre><code>
+///Apos a linha 279, adicione:
+  ///Selfish Node
+  bool selfish;
+   </code></pre>
+</p>
+
+
+
+
+
+
+
+
+
+
+
 
