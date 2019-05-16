@@ -40,27 +40,27 @@ Output: Routing, Disposal, or Package Processing.
 </p>
 
 ---
-# COMO USAR?
+# HOW TO USE?
 
-Voce tem duas duas escolhas de como usar, ou voce baixa o ns-allinone-2.34 ja modificado [aqui](link) ou baixa o pacote limpo do ns-allinone-2.34 [aqui](link) e modifica os codigos manulamente.
+You have two choices of how to use it, or you can download ns-allinone-2.34 already modified [here] (link) or download the ns-allinone-2.34 clean package [here] (link) and modify the codes manually.
 
-## Alterando manualmente:
-Levando em consideracao que voce ja tenha a versao ns-allinone-2.34 compilado, voce tera de adicionar as modificacoes nos arquivos AODV; DSDV; OLSR; DSR, respectivamente.
+## Manually changing:
+Taking into consideration that you already have the ns-allinone-2.34 version compiled, you will have to add the modifications in the AODV files; DSDV; OLSR; DSR, respectively.
 
-> Voce nao precisa alterar todos, modifique apenas o protocolo que deseja utilizar.
+> You do not need to change all, just modify the protocol you want to use.
 
-Alem do mais, em nossos testes, apenas recompilar com o comando `make` nao foi o suficente, outros comandos como `make clean && make distclean` foram necessarios para o correto funcionamento do programa.
+Moreover, in our tests, just recompiling with the `make` command was not enough, other commands like` make clean && make distclean` were necessary for the correct operation of the program.
 
-Para modificar os arquivos manualmente siga o tutorial abaixo. 
+To modify the files manually follow the tutorial below.
 
-> Observacao: Os arquivos precisam ser compilados com uma versao do Gcc inferior a versao 5.0, em nossos testes foi utilizado a versao "gcc (Ubuntu 4.8.5-4Ubuntu9) 4.8.5" e a versao "g++ (GCC) 3.4.6 20060404 (Hed Hat 3.4.6-19.el6)"
+> Note: Files need to be compiled with a version of Gcc below version 5.0, in our tests we used the version "gcc (Ubuntu 4.8.5-4Ubuntu9) 4.8.5" and the version "g++ (GCC) 3.4.6 20060404 (Hed Hat 3.4.6-19.el6)".
 
-## Para usar o protocolo AODV, altere os arquivos:
+## To use the AODV protocol, change the files:
 
 * ns-2.34/aodv/aodv.cc
 <p>
   <pre><code>
-///entre as linhas 97-98, adicione: 
+///Between the lines 97-98, add: 
 ///Start Sefish Behavior
     if(strcmp(argv[1], "egoista_on") == 0){
 	   selfish = true;
@@ -76,7 +76,7 @@ Para modificar os arquivos manualmente siga o tutorial abaixo.
 
 <p>
   <pre><code>
-///apos a linha 153, adicione:
+///After the line 153, add:
 ///Initializing variable
   selfish = false;
 </code></pre>
@@ -84,7 +84,7 @@ Para modificar os arquivos manualmente siga o tutorial abaixo.
 
 <p>
   <pre><code>
-///Entre a inha 609-610, adicione:
+///Between the lines 609-610, add:
 ///Set node's Behavior selfish - By Diógenes
    if(ih->saddr() != index && selfish == true){
 	  drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
@@ -98,7 +98,7 @@ Para modificar os arquivos manualmente siga o tutorial abaixo.
 
 <p>
   <pre><code>
-	///Apos a linha 326, adicione:
+	///After the line 326, add:
 	///selfish node
 	bool selfish;
  </code></pre>
@@ -106,12 +106,12 @@ Para modificar os arquivos manualmente siga o tutorial abaixo.
 
 ---
 ---
-## Para usar o protocolo DSDV
+## To use the DSDV protocol, change the files:
 * ns-2.34/dsdv/dsdv.cc
 
 <p>
   <pre><code>
-///Entre as linhas 1060 e 1061, adicione:
+///Between the lines 1060 e 1061, add:
      ///Set node's Behavior selfish - By Diógenes
       if(src != myaddr_ && selfish == true && cmh->ptype() != PT_MESSAGE){
 	drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
@@ -122,14 +122,14 @@ Para modificar os arquivos manualmente siga o tutorial abaixo.
       
 <p>
   <pre><code>
-///Na linha 1099, adicione:
+///On the line 1099, add:
 selfish = false;
  </code></pre>
 </p>
 
 <p>
   <pre><code>
-///Entre as linhas 1050 e 1051, adicione:
+///Between the lines 1050 e 1051, add:
 	///Start Sefish Behavior
       else if(strcmp(argv[1], "egoista_on") == 0){
 	   selfish = true;
@@ -148,7 +148,7 @@ selfish = false;
 
 <p>
   <pre><code>
-///Apos a linha 140, adicione:  
+///After the line 140, add:  
 ///selfish node
   bool selfish;
 </code></pre>
@@ -156,12 +156,12 @@ selfish = false;
 
 ---
 ---
-## Para usar o protocolo OLSR, altere os arquivos:
+## To use the OLSR protocol, change the files:
 * ns-2.34/olsr/olsr.cc
 
 <p>
   <pre><code>
-///Entre as linhas 216 e 217: adicione:
+///Between the lines 216 e 217: add:
      ///Start Sefish Behavior
     if(strcmp(argv[1], "egoista_on") == 0){
 	   selfish = true;
@@ -177,7 +177,7 @@ selfish = false;
 
 <p>
   <pre><code>
-///Entre as linha 477 e 478, adicione 
+///Between the lines 477 e 478, add 
    //Selfish var starting
    selfish = false;
 </code></pre>
@@ -185,7 +185,7 @@ selfish = false;
 
 <p>
   <pre><code>
-///Entre as linha 515 e 516, adicione:
+///Between the lines 515 e 516, add:
      ///Set node's Behavior selfish - By Diógenes
      if((ih->saddr() != ra_addr()) && selfish == true){
 		drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
@@ -198,7 +198,7 @@ selfish = false;
 * ns-2.34/olsr/olsr.h
 <p>
   <pre><code>
-///Apos a Linha 361, adicione:
+///After the line 361, add:
    /// Sets the behavior selfish node
    bool selfish;
    </code></pre>
@@ -206,19 +206,19 @@ selfish = false;
 
 ---
 ---
-## Para usar o protocolo DSR, altere os arquivos:
+## To use the DSR protocol, change the files:
 * ns-2.34/dsr/dsragent.cc
 
 <p>
   <pre><code>
-///Apos linha 390, adicione:
+///After the line 390, add:
 selfish = false;
    </code></pre>
 </p>
 
 <p>
   <pre><code>
-///Entre as linhas 490 e 491, adicione:
+///Between the lines 490 e 491, add:
       ///Start Sefish Behavior
       if(strcmp(argv[1], "egoista_on") == 0){
 	   selfish = true;
@@ -234,7 +234,7 @@ selfish = false;
 
 <p>
   <pre><code>
-///Entre as linhas 673 e 674, adicione:
+///Between the lines 673 e 674, add:
 	  ///Set node's Behavior selfish - By Diógenes
 	  if(p.src != net_id && selfish == true && cmh->ptype() != PT_DSR){
 	    drop(packet, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
@@ -248,7 +248,7 @@ selfish = false;
 
 <p>
   <pre><code>
-///Apos a linha 279, adicione:
+///After the line 279, add:
   ///Selfish Node
   bool selfish;
    </code></pre>
