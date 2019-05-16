@@ -47,7 +47,7 @@ Voce tem duas duas escolhas de como usar, ou voce baixa o ns-allinone-2.34 ja mo
 ## Alterando manualmente:
 Levando em consideracao que voce ja tenha a versao ns-allinone-2.34 compilado, voce tera de adicionar as modificacoes nos arquivos AODV; DSDV; OLSR; DSR, respectivamente.
 
-> Voce nao precisa alterar todos, apenas modifique apenas o protocolo que deseja utilizar.
+> Voce nao precisa alterar todos, modifique apenas o protocolo que deseja utilizar.
 
 Alem do mais, em nossos testes, apenas recompilar com o comando `make` nao foi o suficente, outros comandos como `make clean && make distclean` foram necessarios para o correto funcionamento do programa.
 
