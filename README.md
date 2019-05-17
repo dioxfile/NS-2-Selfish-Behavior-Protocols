@@ -20,8 +20,9 @@ The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ie
 
 There are two types of us selfish:
 
-which correctly participates in the routing process. However, they haven't redirected data packets;
-and what does not participate, drop control messages.
+1 - which correctly participates in the routing process. However, they haven't redirected data packets;
+
+2 - and what does not participate, drop control messages.
 
 The selfish node of type 2 has no effect on the packet delivery rate. However, type 1 is the most damaging to the network by degrading the packet delivery rate.
 
