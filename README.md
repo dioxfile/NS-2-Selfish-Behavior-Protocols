@@ -16,16 +16,14 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 ---
 # Definition of Selfish Nodes:
 
-The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ieee.org/abstract/document/4756492) is that it participates in routing functions by agreeing to forward packets on behalf of other nodes, but instead silently discards packets in an attempt to save energy and bandwidth.
+The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ieee.org/abstract/document/4756492) is that it participates in routing functions by agreeing to forward packets on behalf of other nodes, instead of silently drops packets in an attempt to save energy and bandwidth.
 
-* There are two types of us selfish:
+There are two types of us selfish:
 
-<ol>
-  <li>which correctly participates in the routing functions, but does not redirect data packets;</li>
-  <li>and what does not participate, discarding control messages.</li>
-</ol>
+which correctly participates in the routing process. However, they haven't redirected data packets;
+and what does not participate, drop control messages.
 
-> The selfish node of type 2 has no great effect on the packet delivery rate. However, type 1 is the most damaging to the network by degrading the packet delivery rate.
+The selfish node of type 2 has no effect on the packet delivery rate. However, type 1 is the most damaging to the network by degrading the packet delivery rate.
 
 ---
 <p>
