@@ -20,7 +20,7 @@ The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ie
 
 There are two types of us selfish:
 
-1 - which correctly participates in the routing process. However, they haven't redirected data packets;
+1 - which correctly participates in the routing process. However, they do not forward data packets to other nodes.
 
 2 - and what does not participate, drop control messages.
 
