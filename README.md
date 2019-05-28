@@ -33,16 +33,16 @@ The selfish node of type 2 has no effect on the packet delivery rate. However, t
 ALGORITHM 1
 Selfish Behavior of the AODV/DSDV/OLSR/DSR Node.
 --------------------------------------------------------------
-Input: Data Package or Control.
-Output: Routing, Disposal, or Package Processing.
-1: if (Data Package) then
+Input: Data Packet or Control Packet.
+Output: Packet Routing, Packet Dropping, or  Packet Processing.
+1: if (Data Packet) then
 2:  if (Data Packet was Originated in the Current Node) then
-3:    Forwards(Package);
+3:    Forwards(Packet);
 4:  else
-5:    Drop(Package);
+5:    Drop(Packet);
 6:  end if
 7: else
-8:  Pass the package to the AODV/DSDV/OLSR/DSR for processing;
+8:  Pass the packet to the AODV/DSDV/OLSR/DSR for processing;
 9: end if
   </code></pre>
 </p>
