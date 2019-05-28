@@ -70,7 +70,7 @@ After modifying the files of the desired protocols compile the program with the 
  
 > Note: Files need to be compiled with a version of Gcc below version 5.0, in our tests we used the version "gcc (Ubuntu 4.8.5-4Ubuntu9) 4.8.5" and the version "g++ (GCC) 3.4.6 20060404 (Hed Hat 3.4.6-19.el6)".
 
-## Para criar o evento de descarte por egoísmo:
+## To create the dropping event out of selfishness:
 
 * ns-2.34/trace/cmu-trace.h
 <p>
@@ -280,24 +280,24 @@ selfish = false;
 </p>
 
 ## OBS: 
-Outra possibilidade consiste em baixar os arquivos modificados disponíveis neste git, por exemplo: cmu-trace.h, (aodv.(h,cc), dsdv.(h,cc), olsr.(h,cc) e dsragent.(h,cc)). Substituir os originais em: ns-2.34/trace/cmu-trace.h, ns-2.34/aodv/aodv.(h,cc), ns-2.34/dsdv/dsdv.(h,cc), ns-2.34/olsr/olsr.(h,cc) e ns-2.34/dsr/dsragent.(h,cc). E, então recompilar o NS-2 conforme previamente descrito.
+Another possibility is to download the modified files available in this git, for example: cmu-trace.h, (aodv.(h,cc), dsdv.(h,cc), olsr.(h,cc) e dsragent.(h,cc)). Replace the originals in: ns-2.34/trace/cmu-trace.h, ns-2.34/aodv/aodv.(h,cc), ns-2.34/dsdv/dsdv.(h,cc), ns-2.34/olsr/olsr.(h,cc) e ns-2.34/dsr/dsragent.(h,cc).And then recompile NS-2 as previously described.
 
 # HOW TO USE?
-Uma vez que o NS-2 esteja instalado e todas as alterações necessárias tenham sido feitas nos arquivos cmu-trace.h (eg., evento de descarte de pacotes por egoísmo), AODV(.h and .cc) ou DSDV(.h and .cc) ou OLSR(.h and .cc) ou DSR(.h and .cc). 
+Once NS-2 is installed and all necessary changes have been made to the cmu-trace.h files (eg, packet discarding event for selfishness), AODV(.h and .cc) or DSDV(.h and .cc) or OLSR(.h and .cc) or DSR(.h and .cc). 
 
-Agora é necessário seguir os seguintes passos:
+You now need to follow these steps:
 
-1 - Baixe o arquivo 802_11b.tcl e altere a linha 14 para o protocolo de sua escolha (AODV, DSDV, OLSR ou DSR);
+1 - Download the 802_11b.tcl file and change line 14 to the protocol of your choice (AODV, DSDV, OLSR or DSR);
 
-2 - Baixe os seguintes arquivos na mesma pasta onde está o 802_11b.tcl: mesh_traffic.tcl, mobility.tcl e Selfish_GENERATOR.cc. 
+2 - Download the following files in the same folder where 802_11b.tcl is located: mesh_traffic.tcl, mobility.tcl, and Selfish_GENERATOR.cc. 
 
-3 - No terminal Compile/execute o arquivo Selfish_GENERATOR.cc: 
+3 - In the terminal Compile/run the file Selfish_GENERATOR.cc: 
 	
 	a) $ sudo g++  Selfish_GENERATOR.cc -o Selfish_GENERATOR
 	
-	b) Agora é só executar o mesmo: $ ./Selfish_GENERATOR 5 50. Em que 5 é a quantidade de nós egoístas e 50 é a quantidade total de nós na simulação (previamente configurados em 802_11b.tcl).
+	b) Now just run it: $ ./Selfish_GENERATOR 5 50. Where 5 is the number of selfish nodes and 50 is the total number of nodes in the simulation (previously configured in 802_11b.tcl).
 	
-	c) Após a execução de Selfish_GENERATOR, se tudo ocorreu bem, foi criado um arquivo Selfish.tcl com um conteúdo semelhante a isso: 
+	c) After running Selfish_GENERATOR, if everything went well, a Selfish.tcl file with a content similar to this was created:
 	
 	$ns_ at 0.0 "[$node(26) set ragent_] egoista_on"
 	$ns_ at 0.0 "[$node(47) set ragent_] egoista_on"
@@ -305,11 +305,11 @@ Agora é necessário seguir os seguintes passos:
 	$ns_ at 0.0 "[$node(32) set ragent_] egoista_on"
 	$ns_ at 0.0 "[$node(24) set ragent_] egoista_on"
 
-4 - Execute, no terminal, a simulação como segue: `$ ns 802_11b.tcl`, após o término da simulação abra o `trace file 'TRACE_Arquivo.tr'` com um editor de sua preferência e verifique se há um evento de descarte com o `flag SEL`, se sim tudo ocorreu como previsto. Ex: 
+4 -Execute, in the terminal, the simulation as follows: `$ ns 802_11b.tcl`, after the simulation is finished open the`trace file 'TRACE_Arquivo.tr'` with an editor of your choice check for a dropping event with the `flag SEL`, if yes, everything happened as planned. Ex: 
 
 `D 11.197096623 _19_ RTR  SEL 339 cbr 1020 [13a 13 27 800] [energy 99.580939 ei 0.000 es 0.000 et 0.029 er 0.390] ------- [4:0 5:0 30 19] [6] 3 5`
 
-OBS: faça uma análise no `trace file` para ter certeza que a simulação tenha ocorrido conforme as modificações previamente recomendadas e em caso de dúvidas revise, detalhadamente, todo o processo.
+OBS: make an analysis in the `trace file` to make sure that the simulation has occurred according to the modifications previously recommended and in case of doubts, review the process in detail.
 	
 <!-- ![all text](https://github.com/dioxfile/NS-2-Selfish-Behavior-Protocols/raw/master/Images/protocol_change.png) -->
 
