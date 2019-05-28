@@ -109,7 +109,6 @@ $ns_ node-config -adhocRouting $val(routP) \
 
 # Wireless
 for {set i 0} {$i < $val(node)} {incr i} {
-    $ns_ node-config -initialEnergy 100
     set node($i) [$ns_ node]
     $node($i) color green
     $ns_ at 0.0 "$node($i) label WN_$i"
