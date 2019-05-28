@@ -279,6 +279,9 @@ selfish = false;
    </code></pre>
 </p>
 
+## OBS: 
+Outra possibilidade consiste em baixar os arquivos modificados disponíveis neste git, por exemplo: cmu-trace.h, (aodv.(h,cc), dsdv.(h,cc), olsr.(h,cc) e dsragent.(h,cc)). Substituir os originais em: ns-2.34/trace/cmu-trace.h, ns-2.34/aodv/aodv.(h,cc), ns-2.34/dsdv/dsdv.(h,cc), ns-2.34/olsr/olsr.(h,cc) e ns-2.34/dsr/dsragent.(h,cc). E, então recompilar o NS-2 conforme previamente descrito.
+
 # HOW TO USE?
 Uma vez que o NS-2 esteja instalado e todas as alterações necessárias tenham sido feitas nos arquivos cmu-trace.h (eg., evento de descarte de pacotes por egoísmo), AODV(.h and .cc) ou DSDV(.h and .cc) ou OLSR(.h and .cc) ou DSR(.h and .cc). 
 
