@@ -270,7 +270,7 @@ selfish = false;
 </p>
 
 # HOW TO USE?
-Uma vez que o NS-2 esteja instalado e todas as alterações foram feitas nos arquivos AODV(.h and .cc) ou DSDV(.h and .cc) ou OLSR(.h and .cc) ou DSR(.h and .cc) ou em ambos, e os mesmos estejam corretamente compilados é necessário seguir os seguintes passos:
+Uma vez que o NS-2 esteja instalado e todas as alterações necessárias tenham sido feitas nos arquivos cmu-trace.h (eg., evento de descarte de pacotes por egoísmo) e AODV(.h and .cc) ou DSDV(.h and .cc) ou OLSR(.h and .cc) ou DSR(.h and .cc). Agora é necessário seguir os seguintes passos:
 1 - Baixe o arquivo 802_11b.tcl e altere a linha 14 para o protocolo de sua escolha (AODv DSDV, OLSR ou DSR);
 2 - Baixe os seguintes arquivos na mesma pasta onde está o 802_11b.tcl: mesh_traffic.tcl, mobility.tcl e Selfish_GENERATOR.cc. 
 3 - No terminal Compile/execute o arquivo Selfish_GENERATOR.cc: 
