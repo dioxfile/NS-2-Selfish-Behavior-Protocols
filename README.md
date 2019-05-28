@@ -279,7 +279,7 @@ selfish = false;
    </code></pre>
 </p>
 
-## OBS: 
+## Observations: 
 Another possibility is to download the modified files available in this git, for example: cmu-trace.h, aodv.(h,cc), dsdv.(h,cc), olsr.(h,cc) e dsragent.(h,cc). Replace the originals in: ns-2.34/trace/cmu-trace.h, ns-2.34/aodv/aodv.(h,cc), ns-2.34/dsdv/dsdv.(h,cc), ns-2.34/olsr/olsr.(h,cc) e ns-2.34/dsr/dsragent.(h,cc). And then recompile NS-2 as previously described.
 
 # HOW TO USE?
