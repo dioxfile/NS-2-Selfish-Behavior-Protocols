@@ -302,7 +302,9 @@ Agora é necessário seguir os seguintes passos:
 	$ns_ at 0.0 "[$node(32) set ragent_] egoista_on"
 	$ns_ at 0.0 "[$node(24) set ragent_] egoista_on"
 
-4 - Execute, no terminal, a simulação como segue: `$ ns 802_11b.tcl`, após o término da simulação abra o `trace file 'TRACE_Arquivo.tr'` com um editor de sua preferência e verifique se há um evento de descarte com o `flag SEL`, se sim tudo ocorreu como previsto.
+4 - Execute, no terminal, a simulação como segue: `$ ns 802_11b.tcl`, após o término da simulação abra o `trace file 'TRACE_Arquivo.tr'` com um editor de sua preferência e verifique se há um evento de descarte com o `flag SEL`, se sim tudo ocorreu como previsto. Ex: 
+
+`D 11.197096623 _19_ RTR  SEL 339 cbr 1020 [13a 13 27 800] [energy 99.580939 ei 0.000 es 0.000 et 0.029 er 0.390] ------- [4:0 5:0 30 19] [6] 3 5`
 
 OBS: faça uma análise no `trace file` para ter certeza que a simulação tenha ocorrido conforme as modificações previamente recomendadas e em caso de dúvidas revise, detalhadamente, todo o processo.
 	
