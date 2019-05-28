@@ -7,37 +7,37 @@ using namespace std;
 
 int main()
 {
-	int NSelfish; //numero de nós egoístas
-	int INTERVALO; //intervalo de geração de nós egoístas;
-	srand(time(NULL)); //evitar vício da semente 
-	cout <<"\nDigite a quantidade de nós egoístas: ";
+	int NSelfish; //Selfish Number
+	int INTERVALO; //Interval to Generate Selfish Nodes
+	srand(time(NULL)); //Avoid Seed addiction 
+	cout <<"\nEnter the number of selfish nodes: ";
 		cin>>NSelfish;
-	cout <<"\nDigite o intervalo de distribuíção: ";
+	cout <<"\nType the distribution interval: ";
 		cin>>INTERVALO;
-		int val[NSelfish]; //matriz para armazenar os números gerados
+		int val[NSelfish]; //array to store the generated numbers
 		ofstream grava("Selfish.tcl", ios::out);
 			if(!grava){
-				cerr<<"Erro: não é possível abrir o arquivo!!!"<<endl;
+				cerr<<"Error: Isn't possible open file!!!"<<endl;
 				exit(1);
 			}
 		string s="$ns_ at 0.0 \"[$node(";
-		string c=") set ragent_] egoista_on\"";
+		string c=") set ragent_] egoista_on\""; //'Egoísta' is selfish in Portuguese
 		for (int i=0;i<NSelfish;i++)
 		{
-			bool check; //verifica se o numero já foi usado
-			int n; //var p/ armazenar o rand
+			bool check; //check if the number has already been used
+			int n; //Save rand number
 			do
 			{
 				n=rand()%INTERVALO;
 				check=true;
 				for (int j=0;j<i;j++)
-					if (n == val[j]) //se o número já foi sorteado
+					if (n == val[j]) //if the number has already been seeded
 					{
-						check=false; //seta verifica para falso
-						break; //não precisa verificar outros elementos da matriz val[]
+						check=false;
+						break;
 					}
-			} while (!check); //continua o loop até um novo numero ser achado
-		val[i]=n; //guarda o número na matriz
+			} while (!check); //continue the loop until a new number is found
+		val[i]=n; //save the number in the array
 		grava<<s<<val[i]<<c<<endl;
 		}
 		grava.close();
