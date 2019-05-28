@@ -71,6 +71,11 @@ $ns_ color 3 green
 set ArquivoTrace [open TRACE_Arquivo.tr w]
 $ns_ trace-all $ArquivoTrace
 
+#Throughput
+for {set v 0} {$v < $val(trafego)} {incr v} {
+set th($v) [open throughput$v.tr w]
+}
+
 # NAM File  Writing
 set ArquivoNam [open NAM_Arquivo.nam w]
 $ns_ namtrace-all $ArquivoNam
@@ -143,10 +148,11 @@ for {set n 0} {$n < $val(node) } {incr n} {
 
 
 proc final {} {
-global ns_ ArquivoTrace ArquivoNam val
+global ns_ ArquivoTrace ArquivoNam th val
 $ns_ flush-trace
 close $ArquivoTrace
 close $ArquivoNam
+close $th
 }
 exec nam NAM_Arquivo.nam &
 exit 0
