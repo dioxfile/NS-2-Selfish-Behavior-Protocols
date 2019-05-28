@@ -89,7 +89,6 @@
 #define DROP_IFQ_FILTER                 "FIL"
 
 #define DROP_OUTSIDE_SUBNET             "OUT"   // dropped by base stations if received rtg updates from nodes outside its domain.
-///Adicionado por dioxfile indica que o descarte foi devido a mal comportamento - nó egoísta
 #define DROP_RTR_SELFISH                 "SEL"   // Selfish DROP
 //#define DROP_RTR_SELF_ENERGY             "ENRG"   // Selfish DROP
 #define MAX_ID_LEN	3
