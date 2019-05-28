@@ -18,9 +18,9 @@
   set val(drop)            Queue/DropTail/PriQueue   ;# FIFO Drop Queue
   }                                                  
   set val(node)              50                      ;# Node Number
-  set val(x)               1000;#3410                ;# Axis X 
-  set val(y)               1000;#1810                ;# Axis Y
-  set val(trafego)           2;#12                   ;# Traffic Source Quantity
+  set val(x)               1000                      ;# Axis X 
+  set val(y)               1000                      ;# Axis Y
+  set val(trafego)           10                      ;# Traffic Source Quantity
   set val(TX)                 1.2W                   ;# Default NS2 - 0.400 -> 0,000509W/PKT
   set val(RX)                 0.6W                   ;# Default NS2 - 0.300 -> 0.000156W/PKT 
   set val(IniEner)          100.00                   ;# Initial Energy
@@ -31,8 +31,8 @@
 # ---------------------BEGIN OLSR EXTENSIONS----------------------------
 
 Agent/OLSR set mpr_algorithm_               1    ;# 1 = RFC 3626, 2 = MPRR1, 3 = MPRR2, 4 = QOLSR, 5 = OLSRD
-Agent/OLSR set routing_algorithm_           2    ;# OLSR Routing = 1 e Dijkstra = 2;
-Agent/OLSR set link_quality_                4    ;# OLSR = Hop-count, ETX = 2, ML = 3 e MD = true 
+Agent/OLSR set routing_algorithm_           1    ;# OLSR Routing = 1 e Dijkstra = 2;
+Agent/OLSR set link_quality_                1    ;# OLSR -> Hop-count = 1, ETX = 2, ML = 3 e MD = true 
 Agent/OLSR set link_delay_                 false ;# If true LD will be used
 Agent/OLSR set c_alpha_             	    0.4  ;# Smoothing Factor OLSR-MD only.
 Agent/OLSR set willingness_         	    3    ;# Default (as published in RFC 3626)
