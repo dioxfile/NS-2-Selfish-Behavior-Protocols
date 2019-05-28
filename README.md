@@ -311,6 +311,7 @@ You now need to follow these steps:
 
 OBS: make an analysis in the `trace file` to make sure that the simulation has occurred according to the modifications previously recommended and in case of doubts, review the process in detail.
 	
+## These codes were developed for use in this research: [José](https://doi.org/10.22456/2175-2745.86380).
 <!-- ![all text](https://github.com/dioxfile/NS-2-Selfish-Behavior-Protocols/raw/master/Images/protocol_change.png) -->
 
 **[⬆ back to top](#NS-2-Selfish-Behavior-Protocols)**
