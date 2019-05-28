@@ -5,15 +5,16 @@
 #include <cstring>
 using namespace std;
 
-int main()
+int main(int argc, char* argv[])
 {
+  if(argc !=3)
+	cout<<"USAGE: ./<PROGRAM> <Nº Selfish Nodes> <Node Interval (eg., 10, 20, 30, 50,...,n, n+1)>"<<endl;
+  else {
 	int NSelfish; //Selfish Number
 	int INTERVALO; //Interval to Generate Selfish Nodes
 	srand(time(NULL)); //Avoid Seed addiction 
-	cout <<"\nEnter the number of selfish nodes: ";
-		cin>>NSelfish;
-	cout <<"\nType the distribution interval: ";
-		cin>>INTERVALO;
+	NSelfish = atoi(argv[1]);
+	INTERVALO = atoi(argv[2]);
 		int val[NSelfish]; //array to store the generated numbers
 		ofstream grava("Selfish.tcl", ios::out);
 			if(!grava){
@@ -24,22 +25,29 @@ int main()
 		string c=") set ragent_] egoista_on\""; //'Egoísta' is selfish in Portuguese
 		for (int i=0;i<NSelfish;i++)
 		{
-			bool check; //check if the number has already been used
-			int n; //Save rand number
-			do
-			{
-				n=rand()%INTERVALO;
-				check=true;
-				for (int j=0;j<i;j++)
-					if (n == val[j]) //if the number has already been seeded
-					{
+			if(NSelfish > INTERVALO){
+				cout<<"The number of selfish nodes can not be greater than interval!!!"<<endl;
+				break;
+			} else {
+			
+			    bool check; //check if the number has already been used
+			    int n; //Save rand number
+			    do
+			      {
+				   n=rand()%INTERVALO;
+				   check=true;
+				   for (int j=0;j<i;j++)
+					 if (n == val[j]) //if the number has already been seeded
+					 {
 						check=false;
 						break;
-					}
-			} while (!check); //continue the loop until a new number is found
-		val[i]=n; //save the number in the array
-		grava<<s<<val[i]<<c<<endl;
-		}
-		grava.close();
-		return 0;
+					 }
+			       } while (!check); //continue the loop until a new number is found
+		        val[i]=n; //save the number in the array
+		        grava<<s<<val[i]<<c<<endl;
+		    }
+	    }
+	   grava.close();
+	   return 0;
+  }
 }
