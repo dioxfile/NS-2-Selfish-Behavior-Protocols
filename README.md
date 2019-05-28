@@ -18,7 +18,7 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 
 The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ieee.org/abstract/document/4756492) is that it participates in routing functions by agreeing to forward packets on behalf of other nodes, instead of silently drops packets in an attempt to save energy and bandwidth.
 
-There are two types of us selfish:
+There are two types of selfish nodes:
 
 1 - which correctly participates in the routing process. However, it does not forward data packets to other nodes.
 
