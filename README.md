@@ -290,17 +290,17 @@ Agora é necessário seguir os seguintes passos:
 
 3 - No terminal Compile/execute o arquivo Selfish_GENERATOR.cc: 
 	
-	a) `$ sudo g++  Selfish_GENERATOR.cc -o Selfish_GENERATOR`
+	a) $ sudo g++  Selfish_GENERATOR.cc -o Selfish_GENERATOR
 	
 	b) Agora é só executar o mesmo: `$ ./Selfish_GENERATOR 5 50`. Em que 5 é a quantidade de nós egoístas e 50 é a 			quantidade total de nós na simulação (previamente configurados em 802_11b.tcl).
 	
 	c) Após a execução de Selfish_GENERATOR, se tudo ocorreu bem, foi criado um rquivo Selfish.tcl com um conteúdo 			semelhante a isso: 
 	
-	`$ns_ at 0.0 "[$node(26) set ragent_] egoista_on"
+	$ns_ at 0.0 "[$node(26) set ragent_] egoista_on"
 	$ns_ at 0.0 "[$node(47) set ragent_] egoista_on"
 	$ns_ at 0.0 "[$node(33) set ragent_] egoista_on"
 	$ns_ at 0.0 "[$node(32) set ragent_] egoista_on"
-	$ns_ at 0.0 "[$node(24) set ragent_] egoista_on"`
+	$ns_ at 0.0 "[$node(24) set ragent_] egoista_on"
 
 4 - Execute, no terminal, a simulação como segue: `$ ns 802_11b.tcl`, após o término da simulação abra o `trace file 'TRACE_Arquivo.tr'` com um editor de sua preferência e verifique se há um evento de descarte com o `flag SEL`, se sim tudo ocorreu como previsto.
 
