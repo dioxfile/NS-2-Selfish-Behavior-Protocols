@@ -2,35 +2,34 @@
 #Script TCL Wireless Mesh Network Using Wired-Cum-Wireless NS-2
 #=================DEFINIÇÕES=====================================================================================
   global val
-  global defaultRNG                                  ;# Variável global
-  set val(canal)           Channel/WirelessChannel   ;# Tipo de Canal (1-11)
-  set val(propacacao)      Propagation/TwoRayGround  ;# Modelo de propagação de rádio
-  set val(antena)          Antenna/OmniAntenna       ;# Tipo de antena (omni ou direta)
-  set val(layer2)          LL                        ;# Tipo de camada de Enlace
-  set val(drop)            Queue/DropTail/PriQueue   ;# Inerface de tipo de fila tipo de Buffer (fila = f; f<=50; se f> 50 pk são descartados)
-  set val(fileSize)          50                      ;# Comprimento da fila
-  set val(wlan0)           Phy/WirelessPhy           ;# Tipo de Interface de rede (Assimila-se ao DSSS)
-  set val(mac)             Mac/802_11                ;# Tipo de MAC, nesse caso IEEE 802.11 modo DCF
-  set val(routP)           AODV
- if { $val(routP) == "DSR" } {                       ;# Necessário para usar o DSR
-  set val(drop)            CMUPriQueue		     ;# pois o DSR não usa Queue/DropTail/PriQueue
+  global defaultRNG                                  ;# RNG Global Var
+  set val(canal)           Channel/WirelessChannel   ;# Channel(1-11)
+  set val(propacacao)      Propagation/TwoRayGround  ;# Radio Propagation
+  set val(antena)          Antenna/OmniAntenna       ;# Aerial (omni/straight)
+  set val(layer2)          LL                        ;# Link Layer
+  set val(drop)            Queue/DropTail/PriQueue   ;# Queue type
+  set val(fileSize)          50                      ;# Queue size
+  set val(wlan0)           Phy/WirelessPhy           ;# DSSS
+  set val(mac)             Mac/802_11                ;# MAC Type
+  set val(routP)           AODV                      ;# Routing Protocol
+ if { $val(routP) == "DSR" } {                       ;# Only DSR
+  set val(drop)            CMUPriQueue		 
   } else {
-  set val(drop)            Queue/DropTail/PriQueue    ;# Tipo de fila --> FIFO
-  }                                                   ;   # Protocolo de roteamento Ad Hoc
-  set val(node)              50;#63                      ;# Número de nodes móveis
-  set val(x)               1000;#3410                      ;# Tamanho da posição do eixo 
-  set val(y)               1000;#1810                      ;# Tamanho da posição do eixo X (6172100 mts quadrados)
-  set val(trafego)           2;#12                      ;# Numero de fontes de Tráfego
-  set val(TX)                 1.2W                   ;# Default NS2 - 0.400 -> 0,000509W/PKT ;# Energia gasta para transmissão 400mW - 281.8mW ---250 metros
-  set val(RX)                 0.6W                   ;# Default NS2 - 0.300 -> 0.000156W/PKT ;# Energia gasta para Recepção    300mW
-  set val(IniEner)          100.00                   ;# Energia Inicial total do node
-  set val(ModEner)         EnergyModel               ;# Define a qtd de energia gasta p/  transmitir um pacote
-  set val(termina)           50                      ;# Define o tempo de Simulação
+  set val(drop)            Queue/DropTail/PriQueue   ;# FIFO Drop Queue
+  }                                                  
+  set val(node)              50                      ;# Node Number
+  set val(x)               1000;#3410                ;# Axis X 
+  set val(y)               1000;#1810                ;# Axis Y
+  set val(trafego)           2;#12                   ;# Traffic Source Quantity
+  set val(TX)                 1.2W                   ;# Default NS2 - 0.400 -> 0,000509W/PKT
+  set val(RX)                 0.6W                   ;# Default NS2 - 0.300 -> 0.000156W/PKT 
+  set val(IniEner)          100.00                   ;# Initial Energy
+  set val(ModEner)         EnergyModel               ;# Energy Model
+  set val(termina)           50                      ;# Simulation Time
 #===============================================================================================================#
 
 # ---------------------BEGIN OLSR EXTENSIONS----------------------------
 
-#OLSR-Fuzzy_Cost proposed by Diógenes et al UNEMAT/UFG
 Agent/OLSR set mpr_algorithm_               1    ;# 1 = RFC 3626, 2 = MPRR1, 3 = MPRR2, 4 = QOLSR, 5 = OLSRD
 Agent/OLSR set routing_algorithm_           2    ;# OLSR Routing = 1 e Dijkstra = 2;
 Agent/OLSR set link_quality_                4    ;# OLSR = Hop-count, ETX = 2, ML = 3 e MD = true 
