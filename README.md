@@ -270,8 +270,23 @@ selfish = false;
 </p>
 
 # HOW TO USE?
+Uma vez que o NS-2 esteja instalado e todas as alterações foram feitas nos arquivos AODV(.h and .cc) ou DSDV(.h and .cc) ou OLSR(.h and .cc) ou DSR(.h and .cc) ou em ambos, e os mesmos estejam corretamente compilados é necessário seguir os seguintes passos:
+1 - Baixe o arquivo 802_11b.tcl e altere a linha 14 para o protocolo de sua escolha (AODv DSDV, OLSR ou DSR);
+2 - Baixe os seguintes arquivos na mesma pasta onde está o 802_11b.tcl: mesh_traffic.tcl, mobility.tcl e Selfish_GENERATOR.cc. 
+3 - No terminal Compile/execute o arquivo Selfish_GENERATOR.cc: 
+	a) `$ sudo g++  Selfish_GENERATOR.cc -o Selfish_GENERATOR`
+	b) `$ ./Selfish_GENERATOR 5 50` em que 5 é a quantidade de nós egoístas e 50 é a quantidade total de nós na simulação 		(previamente configurados em 802_11b.tcl).
+	c) Após a execução de Selfish_GENERATOR, se tudo ocorreu bem, foi criado um rquivo Selfish.tcl com um conteúdo 			semelhante a isso: 
+	`$ns_ at 0.0 "[$node(26) set ragent_] egoista_on"
+	$ns_ at 0.0 "[$node(47) set ragent_] egoista_on"
+	$ns_ at 0.0 "[$node(33) set ragent_] egoista_on"
+	$ns_ at 0.0 "[$node(32) set ragent_] egoista_on"
+	$ns_ at 0.0 "[$node(24) set ragent_] egoista_on"`
 
+4 - Execute, no terminal, a simulação como segue: `$ ns 802_11b.tcl`, após o término da simulação abra o `trace file 'TRACE_Arquivo.tr'` com um editor de sua preferência e verifique se há um evento de descarte com o `flag SEL`, se sim tudo ocorreu como previsto.
 
+OBS: faça uma análise no `trace file` para ter certeza que a simulação tenha ocorrido conforme as modificações previamente recomendadas e em caso de dúvidas revise, detalhadamente, todo o processo.
+	
 <!-- ![all text](https://github.com/dioxfile/NS-2-Selfish-Behavior-Protocols/raw/master/Images/protocol_change.png) -->
 
 **[⬆ back to top](#NS-2-Selfish-Behavior-Protocols)**
