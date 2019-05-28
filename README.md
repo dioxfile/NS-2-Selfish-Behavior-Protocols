@@ -53,9 +53,9 @@ Output: Packet Routing, Packet Dropping, or  Packet Processing.
 You have two flavors of how to use it, or you can download ns-allinone-2.34 already modified [here] (link) or download the ns-allinone-2.34 clean package [here] (link) and modify the codes manually.
 
 ## Manually changing:
-Taking into consideration that you already have the ns-allinone-2.34 version compiled, you will have to add the modifications in the files AODV(.h and .cc); DSDV(.h and .cc); OLSR(.h and .cc); and DSR(.h and .cc), respectively.
+Taking into consideration that you already have the ns-allinone-2.34 version compiled, you will have to add the modifications in the files cmu-trace.h; AODV(.h and .cc); DSDV(.h and .cc); OLSR(.h and .cc); and DSR(.h and .cc), respectively.
 
-> You do not need to change all, just modify the protocol you want to use.
+> You do not need to change all, just modify cmu-trace.h and the protocol that you want to use.
 
 In our tests, we just recompiling with the `make` command was not enough, other commands like` make clean && make distclean` were necessary for the correct operation of the program.
 
