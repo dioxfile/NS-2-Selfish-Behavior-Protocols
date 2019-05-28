@@ -30,7 +30,7 @@ The selfish node of type 2 has no effect on the packet delivery rate. However, t
 <p>
   <pre><code>
 --------------------------------------------------------------
-A LGORITHM 1
+ALGORITHM 1
 Selfish Behavior of the AODV/DSDV/OLSR/DSR Node.
 --------------------------------------------------------------
 Input: Data Package or Control.
