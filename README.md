@@ -280,15 +280,17 @@ selfish = false;
 </p>
 
 # HOW TO USE?
-Uma vez que o NS-2 esteja instalado e todas as alterações necessárias tenham sido feitas nos arquivos cmu-trace.h (eg., evento de descarte de pacotes por egoísmo) e AODV(.h and .cc) ou DSDV(.h and .cc) ou OLSR(.h and .cc) ou DSR(.h and .cc). Agora é necessário seguir os seguintes passos:
+Uma vez que o NS-2 esteja instalado e todas as alterações necessárias tenham sido feitas nos arquivos cmu-trace.h (eg., evento de descarte de pacotes por egoísmo), AODV(.h and .cc) ou DSDV(.h and .cc) ou OLSR(.h and .cc) ou DSR(.h and .cc). 
 
-1 - Baixe o arquivo 802_11b.tcl e altere a linha 14 para o protocolo de sua escolha (AODv DSDV, OLSR ou DSR);
+Agora é necessário seguir os seguintes passos:
+
+1 - Baixe o arquivo 802_11b.tcl e altere a linha 14 para o protocolo de sua escolha (AODV, DSDV, OLSR ou DSR);
 
 2 - Baixe os seguintes arquivos na mesma pasta onde está o 802_11b.tcl: mesh_traffic.tcl, mobility.tcl e Selfish_GENERATOR.cc. 
 
 3 - No terminal Compile/execute o arquivo Selfish_GENERATOR.cc: 
 	a) `$ sudo g++  Selfish_GENERATOR.cc -o Selfish_GENERATOR`
-	b) `$ ./Selfish_GENERATOR 5 50` em que 5 é a quantidade de nós egoístas e 50 é a quantidade total de nós na simulação 		(previamente configurados em 802_11b.tcl).
+	b) Agora é só executar o mesmo: `$ ./Selfish_GENERATOR 5 50`. Em que 5 é a quantidade de nós egoístas e 50 é a 			quantidade total de nós na simulação (previamente configurados em 802_11b.tcl).
 	c) Após a execução de Selfish_GENERATOR, se tudo ocorreu bem, foi criado um rquivo Selfish.tcl com um conteúdo 			semelhante a isso: 
 	
 	`$ns_ at 0.0 "[$node(26) set ragent_] egoista_on"
