@@ -57,19 +57,6 @@ Taking into consideration that you already have the ns-allinone-2.34 version com
 
 > You do not need to change all, just modify cmu-trace.h and the protocol that you want to use.
 
-In our tests, we just recompiling with the `make` command was not enough, other commands like` make clean && make distclean` were necessary for the correct operation of the program.
-
-To modify the files manually follow the tutorial below.
-
-After modifying the files of the desired protocols compile the program with the commands (do with root permission):</br>
-`# make clean`</br>
-`# make distclean`</br> 
-`# ./configure`</br>
-`# make`</br>
-`# make install`</br>
- 
-> Note: Files need to be compiled with a version of Gcc below version 5.0, in our tests we used the version "gcc (Ubuntu 4.8.5-4Ubuntu9) 4.8.5" and the version "g++ (GCC) 3.4.6 20060404 (Hed Hat 3.4.6-19.el6)".
-
 ## To create the dropping event by selfishness in NS-2:
 
 * ns-2.34/trace/cmu-trace.h
@@ -278,6 +265,19 @@ selfish = false;
   bool selfish;
    </code></pre>
 </p>
+
+In our tests, we just recompiling with the `make` command was not enough, other commands like` make clean && make distclean` were necessary for the correct operation of the program.
+
+To modify the files manually follow the tutorial below.
+
+After modifying the files of the desired protocols compile the program with the commands (do with root permission):</br>
+`# make clean`</br>
+`# make distclean`</br> 
+`# ./configure`</br>
+`# make`</br>
+`# make install`</br>
+ 
+> Note: Files need to be compiled with a version of Gcc below version 5.0, in our tests we used the version "gcc (Ubuntu 4.8.5-4Ubuntu9) 4.8.5" and the version "g++ (GCC) 3.4.6 20060404 (Hed Hat 3.4.6-19.el6)".
 
 ## Observations: 
 Another possibility is to download the modified files available in this git, for example: cmu-trace.h, aodv.(h,cc), dsdv.(h,cc), olsr.(h,cc) e dsragent.(h,cc). Replace the originals in: ns-2.34/trace/cmu-trace.h, ns-2.34/aodv/aodv.(h,cc), ns-2.34/dsdv/dsdv.(h,cc), ns-2.34/olsr/olsr.(h,cc) e ns-2.34/dsr/dsragent.(h,cc). And then recompile NS-2 as previously described.
