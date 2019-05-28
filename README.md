@@ -268,8 +268,6 @@ selfish = false;
 
 In our tests, we just recompiling with the `make` command was not enough, other commands like` make clean && make distclean` were necessary for the correct operation of the program.
 
-To modify the files manually follow the tutorial below.
-
 After modifying the files of the desired protocols compile the program with the commands (do with root permission):</br>
 `# make clean`</br>
 `# make distclean`</br> 
