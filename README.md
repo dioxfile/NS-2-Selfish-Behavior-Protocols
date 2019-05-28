@@ -20,7 +20,7 @@ The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ie
 
 There are two types of selfish nodes:
 
-1 - which correctly participates in the routing process. However, it does not forward data packets to other nodes.
+1 - which correctly participates in the routing process. However, it does not forward data packets to other nodes. Algorithm 1 implements this behavior in AODV, DSDV, OLSR, and DSR protocols in NS-2. 
 
 2 - and what does not participate, drop control messages.
 
