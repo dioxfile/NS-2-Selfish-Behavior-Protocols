@@ -22,7 +22,7 @@ There are two types of selfish nodes:
 
 1 - which correctly participates in the routing process. However, it does not forward data packets to other nodes. Algorithm 1 implements this behavior in AODV, DSDV, OLSR, and DSR protocols in NS-2. 
 
-2 - and what does not participate, drop control messages.
+2 - and what does not participate of the routing process, dropping control messages.
 
 The selfish node of type 2 has no effect on the packet delivery rate. However, type 1 is the most damaging to the network by degrading the packet delivery rate.
 
