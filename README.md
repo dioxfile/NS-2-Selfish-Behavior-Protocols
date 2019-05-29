@@ -301,7 +301,7 @@ Once NS-2 is installed and all necessary changes have been made to the cmu-trace
 	$ns_ at 0.0 "[$node(32) set ragent_] egoista_on"
 	$ns_ at 0.0 "[$node(24) set ragent_] egoista_on"
 
-4 -Execute, in the terminal, the simulation as follows: `$ ns 802_11b.tcl`, after the simulation is finished open the`trace file 'TRACE_Arquivo.tr'` with an editor of your choice check for a dropping event with the `flag SEL`, if yes, everything happened as planned. Ex: 
+4 -Execute, in the terminal, the simulation as follows: `$ ns 802_11b.tcl`, after the simulation is finished open the`trace file 'TRACE_Arquivo.tr'`, and with an editor of your choice check for a dropping event with the `flag SEL`, if yes, everything happened as planned. Ex: 
 
 `D 11.197096623 _19_ RTR  SEL 339 cbr 1020 [13a 13 27 800] [energy 99.580939 ei 0.000 es 0.000 et 0.029 er 0.390] ------- [4:0 5:0 30 19] [6] 3 5`
 
