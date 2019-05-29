@@ -281,9 +281,7 @@ After modifying the files of the desired protocols compile the program with the 
 Another possibility is to download the modified files available in this git, for example: cmu-trace.h, aodv.(h,cc), dsdv.(h,cc), olsr.(h,cc) e dsragent.(h,cc). Replace the originals in: ns-2.34/trace/cmu-trace.h, ns-2.34/aodv/aodv.(h,cc), ns-2.34/dsdv/dsdv.(h,cc), ns-2.34/olsr/olsr.(h,cc) e ns-2.34/dsr/dsragent.(h,cc). And then recompile NS-2 as previously described.
 
 # HOW TO USE?
-Once NS-2 is installed and all necessary changes have been made to the cmu-trace.h files (eg, packet discarding event for selfishness), AODV(.h and .cc) or DSDV(.h and .cc) or OLSR(.h and .cc) or DSR(.h and .cc). 
-
-You now need to follow these steps:
+Once NS-2 is installed and all necessary changes have been made to the cmu-trace.h files (eg, packet discarding event for selfishness), AODV(.h and .cc) or DSDV(.h and .cc) or OLSR(.h and .cc) or DSR(.h and .cc), you now need to follow these steps:
 
 1 - Download the 802_11b.tcl file and change line 14 to the protocol of your choice (AODV, DSDV, OLSR or DSR);
 
