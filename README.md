@@ -50,7 +50,9 @@ Output: Packet Routing, Packet Dropping, or  Packet Processing.
 ---
 # HOW TO INSTALL?
 
-You have two flavors of how to use it, for instance, you can download ns-allinone-2.34 already modified [here] (link) or download the ns-allinone-2.34 clean package [here] (link) and modify the codes manually.
+You have two flavors of how to use it, for instance, you can download ns-allinone-2.34 already modified [NS-2-Selfish-Behavior
+] (https://github.com/dioxfile/NS-2-Selfish-Behavior/archive/master.zip) or download the ns-allinone-2.34 clean package [ns-allinone-2.34
+] (https://github.com/dioxfile/ns-allinone-2.34/archive/master.zip) and modify the codes manually.
 
 ## Manually changing:
 Taking into consideration that you already have the ns-allinone-2.34 version compiled, you will have to add the modifications in the files cmu-trace.h; AODV(.h and .cc); DSDV(.h and .cc); OLSR(.h and .cc); and DSR(.h and .cc), respectively.
