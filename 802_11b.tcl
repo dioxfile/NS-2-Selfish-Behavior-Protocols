@@ -11,7 +11,7 @@
   set val(fileSize)          50                      ;# Queue size
   set val(wlan0)           Phy/WirelessPhy           ;# DSSS
   set val(mac)             Mac/802_11                ;# MAC Type
-  set val(routP)           AODV                      ;# Routing Protocol
+  set val(routP)           AODV                     ;# Routing Protocol
  if { $val(routP) == "DSR" } {                       ;# Only DSR
   set val(drop)            CMUPriQueue		 
   } else {
@@ -111,7 +111,7 @@ $ns_ node-config -adhocRouting $val(routP) \
 		-txPower $val(TX) \
 		-rxPower $val(RX) \
 		-wiredRouting OFF
-
+		
 # Wireless
 for {set i 0} {$i < $val(node)} {incr i} {
     set node($i) [$ns_ node]
@@ -128,7 +128,7 @@ source "mesh_traffic.tcl"
 
 ############################################################################
 puts "Starting Selfish Nodes (eg., Selfish.tcl)..."
-source "Selfish.tcl"
+#source "Selfish.tcl"
 #can be done that way too, for instance:
 #$ns_ at 0.0 "[$node(11) set ragent_] egoista_on"
 #$ns_ at 0.0 "[$node(3) set ragent_] egoista_on"
@@ -146,15 +146,16 @@ for {set n 0} {$n < $val(node) } {incr n} {
  $ns_ at $val(termina).000 "$node($n) reset";
 }
 
-
 proc final {} {
-global ns_ ArquivoTrace ArquivoNam th val
+global ns_ ArquivoTrace ArquivoNam th val geral
 $ns_ flush-trace
 close $ArquivoTrace
 close $ArquivoNam
-close $th
+ for {set v 0} {$v < $val(trafego) } {incr v} {
+	close $th($v)
 }
 exec nam NAM_Arquivo.nam &
+#exec xgraph V_Global.dio -geometry 800x400 &
 exit 0
 }
 
