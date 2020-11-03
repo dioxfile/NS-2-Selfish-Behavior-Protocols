@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
 				exit(1);
 			}
 		string s="$ns_ at 0.0 \"[$node(";
-		string c=") set ragent_] selfish_on\"";
+		string c=") set ragent_] egoista_on\""; //'Egoísta' mean Selfish in Portuguese Language.
 		for (int i=0;i<NSelfish;i++)
 		{
 			if(NSelfish > INTERVALO){
