@@ -198,7 +198,7 @@ selfish = false;
 
 <p>
   <pre><code>
-///Between the lines 515 e 516, add:
+///Between the lines 531 e 531, add:
      ///Set node's Behavior selfish - By Diógenes
      if((ih->saddr() != ra_addr()) && selfish == true){
 		drop(p, DROP_RTR_SELFISH); //Set as "SEL" in the trace.
