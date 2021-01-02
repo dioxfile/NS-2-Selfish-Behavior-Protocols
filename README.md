@@ -211,7 +211,7 @@ selfish = false;
 * ns-2.34/olsr/olsr.h
 <p>
   <pre><code>
-///After the line 361, add:
+///After the line 366, add:
    /// Sets the behavior selfish node
    bool selfish;
    </code></pre>
