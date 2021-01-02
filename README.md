@@ -135,7 +135,7 @@ Taking into consideration that you already have the ns-allinone-2.34 version com
       
 <p>
   <pre><code>
-///On the line 1099, add:
+///On the line 1106, add:
 selfish = false;
  </code></pre>
 </p>
