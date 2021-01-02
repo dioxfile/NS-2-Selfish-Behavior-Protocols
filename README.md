@@ -142,7 +142,7 @@ selfish = false;
 
 <p>
   <pre><code>
-///Between the lines 1161 e 1162, add:
+///Between the lines 1160 e 1161, add:
 	///Start Selfish Behavior
       else if(strcmp(argv[1], "egoista_on") == 0){
 	   selfish = true;
