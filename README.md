@@ -190,7 +190,7 @@ selfish = false;
 
 <p>
   <pre><code>
-///Between the lines 477 e 478, add 
+///Between the lines 490 e 491, add 
    //Selfish var starting
    selfish = false;
 </code></pre>
