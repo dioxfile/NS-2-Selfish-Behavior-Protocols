@@ -18,13 +18,15 @@ According to [Wankhade](https://pdfs.semanticscholar.org/41e2/a539eb1e96cc6a150e
 
 The problem of the selfish nodes according to [Bakakhouya](https://ieeexplore.ieee.org/abstract/document/4756492) is that it participates in routing functions by agreeing to forward packets on behalf of other nodes. However, instead of silently drops packets in an attempt to save energy and bandwidth.
 
-There are two types of selfish nodes:
+There are three types of selfish nodes:
 
 1 - which correctly participates in the routing process. However, it does not forward data packets to other nodes. Algorithm 1 implements this behavior in AODV, DSDV, OLSR, and DSR protocols in NS-2. 
 
-2 - and what does not participate in the routing process, dropping control messages.
+2 - these are nodes with low battery charge on the mobile device, even for maintain their own communication and as a result, after using the network, they turn off their Wireless interface causing route errors and consequently the loss of packets from other nodes.
 
-The selfish node of type 2 has no effect on the packet delivery rate. However, type 1 is the most damaging to the network by degrading the packet delivery rate.
+3 - and what does not participate in the routing process, dropping control messages.
+
+OBS: The selfish node of type 3 has no effect on the packet delivery rate. However, type 1 and type 2 are the ones that do the most damage to the network by degrading the packet delivery rate.
 
 ---
 <p>
