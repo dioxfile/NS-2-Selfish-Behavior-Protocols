@@ -320,7 +320,9 @@ OBS: make an analysis in the `trace file` to make sure that the simulation has o
 
 # How to create Type 2 selfish behavior in NS-2?
 One of the main factors that inhibit cooperation in wireless ad hoc environments is energy savings, as the limitation of power supply undermines the belief that nodes in wireless ad hoc networks will always accept to retransmit packets from other nodes. Therefore, we define Type 2 selfish nodes as a node that goes offline when it has no personal interest in cooperating with other nodes in the system by forwarding their packets. Thus, for Shutting down the nodes in this sandbox uses an NS-2 function that is activated in the file ∼/ns-allinone-2.34/ns-2.34/common/mobilenode.cc, through the comment of line 202 tcl.evalf(" %s reset-state", str);. After commenting out this line, NS-2 must be recompiled. In addition, in order for the mobile nodes to be turned off, it is necessary to activate the NS-2 energy model (EnergyModel) in the simulation tcl script:
+
 • set val(ModEner) EnergyModel : code inserted in the variable header;
+
 • -energyModel $val(ModEner) : code inserted in the mobile node specification.
 
 After that, once the NS-2 energy model is activated, a node can be turned off/on during the simulation with the following commands: $ns_ at 18 "$node_(18) off" (eg, indicates that the node eighteen (18) will be turned off 18 seconds after the start of the simulation) and $ns_ at 43.5 "$node_(18) on" (eg, indicates that node eighteen (18) will be turned back on at the time of 40.5s, 25.5s after it has been turned off).
