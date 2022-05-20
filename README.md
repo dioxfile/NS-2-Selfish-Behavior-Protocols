@@ -352,5 +352,5 @@ Thus, the third parameter is the simulation duration time, it is necessary becau
   </code></pre>
 <p>
 
-# OBS: when running Selfish_GEN_ON_OFF, SEL_DASH.sh must be in the same folder as Selfish_GEN_ON_OFF.
+## OBS: when running Selfish_GEN_ON_OFF, SEL_DASH.sh must be in the same folder as Selfish_GEN_ON_OFF.
 **[⬆ back to top](#NS-2-Selfish-Behavior-Protocols)**
