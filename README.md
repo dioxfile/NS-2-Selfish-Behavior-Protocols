@@ -50,7 +50,7 @@ Output: Packet Routing, Packet Dropping, or  Packet Processing.
 </p>
 
 ---
-# HOW TO INSTALL?
+# How to create Type 1 selfish behavior in NS-2?
 
 You have two flavors of how to use it, for instance, you can download ns-allinone-2.34 already modified [NS-2-Selfish-Behavior
 ](https://github.com/dioxfile/NS-2-Selfish-Behavior/archive/master.zip) or download the ns-allinone-2.34 clean package [ns-allinone-2.34](https://github.com/dioxfile/ns-allinone-2.34/archive/master.zip) and modify the codes manually.
@@ -298,11 +298,16 @@ Once NS-2 is installed and all necessary changes have been made to the cmu-trace
 	
 	c) After running Selfish_GENERATOR, if everything went well, a Selfish.tcl file with a content similar to this was created:
 	
-	$ns_ at 0.0 "[$node(26) set ragent_] egoista_on"
-	$ns_ at 0.0 "[$node(47) set ragent_] egoista_on"
-	$ns_ at 0.0 "[$node(33) set ragent_] egoista_on"
-	$ns_ at 0.0 "[$node(32) set ragent_] egoista_on"
-	$ns_ at 0.0 "[$node(24) set ragent_] egoista_on"
+	$ns_ at 0.0 "[$node_(19) set ragent_] egoista_on"
+	$ns_ at 0.0 "$node_(19) color red"
+	$ns_ at 0.0 "[$node_(42) set ragent_] egoista_on"
+	$ns_ at 0.0 "$node_(42) color red"
+	$ns_ at 0.0 "[$node_(1) set ragent_] egoista_on"
+	$ns_ at 0.0 "$node_(1) color red"
+	$ns_ at 0.0 "[$node_(14) set ragent_] egoista_on"
+	$ns_ at 0.0 "$node_(14) color red"
+	$ns_ at 0.0 "[$node_(26) set ragent_] egoista_on"
+	$ns_ at 0.0 "$node_(26) color red"
 
 4 -Execute, in the terminal, the simulation as follows: `$ ns 802_11b.tcl`, after the simulation is finished open the`trace file 'TRACE_Arquivo.tr'`, and with an editor of your choice check for a dropping event with the `flag SEL`, if yes, everything happened as planned. Ex: 
 
@@ -313,11 +318,32 @@ OBS: make an analysis in the `trace file` to make sure that the simulation has o
 ## These codes were developed for use in this research: [OLSR-Fuzzy Cost](https://doi.org/10.22456/2175-2745.86380).
 <!-- ![all text](https://github.com/dioxfile/NS-2-Selfish-Behavior-Protocols/raw/master/Images/protocol_change.png) -->
 
+# How to create Type 2 selfish behavior in NS-2?
+One of the main factors that inhibit cooperation in wireless ad hoc environments is energy savings, as the limitation of power supply undermines the belief that nodes in wireless ad hoc networks will always accept to retransmit packets from other nodes. Therefore, we define Type 2 selfish nodes as a node that goes offline when it has no personal interest in cooperating with other nodes in the system by forwarding their packets. Thus, for Shutting down the nodes in this sandbox uses an NS-2 function that is activated in the file ∼/ns-allinone-2.34/ns-2.34/common/mobilenode.cc, through the comment of line 202 tcl.evalf(" %s reset-state", str);. After commenting out this line, NS-2 must be recompiled. In addition, in order for the mobile nodes to be turned off, it is necessary to activate the NS-2 energy model (EnergyModel) in the simulation tcl script:
+• set val(ModEner) EnergyModel : code inserted in the variable header;
+• -energyModel $val(ModEner) : code inserted in the mobile node specification.
+
+After that, once the NS-2 energy model is activated, a node can be turned off/on during the simulation with the following commands: $ns_ at 18 "$node_(18) off" (eg, indicates that the node eighteen (18) will be turned off 18 seconds after the start of the simulation) and $ns_ at 43.5 "$node_(18) on" (eg, indicates that node eighteen (18) will be turned back on at the time of 40.5s, 25.5s after it has been turned off).
+In this context, a C++ program, Selfish_GEN_ON_OFF.cc, was developed to automate the creation of Type 2 selfish nodes. In this way, it will be possible to generate selfish nodes that are not transmitter/receiver nodes. The program in question also uses parameter passing and its explanation is as follows:
+
+1. "USAGE: ./<PROGRAM> <No Selfish Nodes> <Node Interval (eg., 10, 20,...,n, n+1)> <Simulation Time> <Node Time offline> <Traffic File> !"-> the first two parameters of this program are exactly the same as the type 1 selfish node generator program.
+Thus, the third parameter is the simulation duration time, it is necessary because to turn off the nodes it is necessary to know how long the simulation will last. Therefore, the fourth parameter is the amount of time the node will behave as selfish, that is, how long this node will be offline. And finally, the last parameter is the traffic file, which will be used in the simulation.
+
+2 - After running Selfish_GEN_ON_OFF, if everything went well, a Selfish_On_Off.tcl file with a content similar to this was created:	
+	$ns_ at 18 "$node_(18) off"
+	$ns_ at 43.5 "$node_(18) on"
+	$ns_ at 0.0 "$node_(18) color red"
+	$ns_ at 26 "$node_(19) off"
+	$ns_ at 51.5 "$node_(19) on"
+	$ns_ at 0.0 "$node_(19) color red"
+	$ns_ at 10 "$node_(38) off"
+	$ns_ at 35.5 "$node_(38) on"
+	$ns_ at 0.0 "$node_(38) color red"
+	$ns_ at 46 "$node_(20) off"
+	$ns_ at 60 "$node_(20) on"
+	$ns_ at 0.0 "$node_(20) color red"
+	$ns_ at 47 "$node_(0) off"
+	$ns_ at 60 "$node_(0) on"
+	$ns_ at 0.0 "$node_(0) color red"
+	
 **[⬆ back to top](#NS-2-Selfish-Behavior-Protocols)**
-
-
-
-
-
-
-
