@@ -332,6 +332,8 @@ In this context, a C++ program, Selfish_GEN_ON_OFF.cc, was developed to automate
 1. "USAGE: ./Selfish_GEN_ON_OFF 10 50 60 20.5 mesh_traffic.tcl !"-> the first two parameters of this program are exactly the same as the type 1 selfish node generator program.
 Thus, the third parameter is the simulation duration time, it is necessary because to turn off the nodes it is necessary to know how long the simulation will last. Therefore, the fourth parameter is the amount of time the node will behave as selfish, that is, how long this node will be offline. And finally, the last parameter is the traffic file, which will be used in the simulation.
 
+# OBS: SEL_DASH.sh must be in the same folder as /Selfish_GEN_ON_OFF.
+
 2. After running Selfish_GEN_ON_OFF, if everything went well, a Selfish_On_Off.tcl file with a content similar to this was created:	
 
 	$ns_ at 18 "$node_(18) off"
