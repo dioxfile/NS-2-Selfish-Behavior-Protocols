@@ -33,7 +33,7 @@ OBS: The selfish node of type 3 has no effect on the packet delivery rate. Howev
   <pre><code>
 --------------------------------------------------------------
 ALGORITHM 1
-Selfish Behavior of the AODV/DSDV/OLSR/DSR Node.
+Selfish Behavior Type 1 of the AODV/DSDV/OLSR/DSR Node.
 --------------------------------------------------------------
 Input: Data Packet or Control Packet.
 Output: Packet Routing, Packet Dropping, or  Packet Processing.
